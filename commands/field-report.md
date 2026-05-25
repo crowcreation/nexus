@@ -34,11 +34,11 @@ If `$ARGUMENTS` contains a date or entry number (e.g., `/field-report 2026-05-25
 *Filed via [Nexus](https://github.com/crowcreation/nexus) failure log*
 ```
 
-1. **Output** the markdown and the direct URL to create a new Discussion in the right category:
-   - Failure Patterns: `https://github.com/crowcreation/nexus/discussions/new?category=failure-patterns`
-   - Drift Incidents: `https://github.com/crowcreation/nexus/discussions/new?category=drift-incidents`
+1. **Output** the markdown and a pre-filled Discussion URL. URL-encode the markdown body and append it as a `body` parameter:
+   - Failure Patterns: `https://github.com/crowcreation/nexus/discussions/new?category=failure-patterns&body=<URL-encoded markdown>`
+   - Drift Incidents: `https://github.com/crowcreation/nexus/discussions/new?category=drift-incidents&body=<URL-encoded markdown>`
 
-Tell the user: "Copy the markdown above, open the link, paste, and post. Nothing is sent automatically."
+Tell the user: "Click the link below to open a new Discussion with the content pre-filled. Review it, edit if needed, and post. Nothing is sent until you click Submit."
 
 ## Synthesis mode
 
@@ -79,10 +79,10 @@ If `$ARGUMENTS` is empty or contains `--synthesis`:
 *Filed via [Nexus](https://github.com/crowcreation/nexus) failure log*
 ```
 
-1. **Output** the markdown and the direct URL:
-   - Field Reports: `https://github.com/crowcreation/nexus/discussions/new?category=field-reports`
+1. **Output** the markdown and a pre-filled Discussion URL. URL-encode the markdown body and append it as a `body` parameter:
+   - Field Reports: `https://github.com/crowcreation/nexus/discussions/new?category=field-reports&body=<URL-encoded markdown>`
 
-Tell the user: "Copy the markdown above, open the link, paste, and post. Nothing is sent automatically."
+Tell the user: "Click the link below to open a new Discussion with the content pre-filled. Review it, edit if needed, and post. Nothing is sent until you click Submit."
 
 ## Privacy contract
 

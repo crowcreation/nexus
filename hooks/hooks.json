@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/session_preflight.py\"",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session_preflight.py\"",
             "timeout": 10000
           }
         ]
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/branch_verify.py\"",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/branch_verify.py\"",
             "timeout": 5000
           }
         ]
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"${CLAUDE_PLUGIN_ROOT}/hooks/session_save.py\"",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session_save.py\"",
             "timeout": 5000
           }
         ]
