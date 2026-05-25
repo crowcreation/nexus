@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus — The Coherence Problem</title>
+  <meta name="description" content="A field guide to AI coordination failure. Why AI workflows break as they scale, and the operational patterns that fix them.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #d4d4d4;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .hero-image {
+      max-width: 720px;
+      width: 100%;
+      margin-bottom: 3rem;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: #e8e8e8;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #808080;
+      font-style: italic;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .lede {
+      max-width: 560px;
+      font-size: 1.15rem;
+      color: #a0a0a0;
+      text-align: center;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .read-link {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 1px solid #404040;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .read-link:hover {
+      border-color: #808080;
+      color: #ffffff;
+    }
+
+    .email-section {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .email-label {
+      font-size: 0.85rem;
+      color: #606060;
+      margin-bottom: 0.5rem;
+    }
+
+    .email-link {
+      color: #707070;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #333;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .email-link:hover {
+      color: #a0a0a0;
+      border-color: #606060;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      color: #404040;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .lede { font-size: 1rem; }
+      .hero { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="./images/hero-cover-1.png" alt="The Coherence Problem" class="hero-image">
+
+    <h1>The Coherence Problem</h1>
+    <p class="subtitle">A field guide to AI coordination failure</p>
+
+    <p class="lede">
+      AI tools are individually excellent. The failures happen in the space between them.
+      This guide names the problem and documents the patterns that fix it.
+    </p>
+
+    <div class="actions">
+      <a href="https://github.com/crowcreation/nexus" class="read-link">Read the field guide</a>
+
+      <div class="email-section">
+        <p class="email-label">Operator notes. No drip sequence. One message when there's something worth reading.</p>
+        <a href="mailto:nexus@crowcreation.com?subject=Operator%20notes" class="email-link">Get notified</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    nexus — context-engineered operating environment
+  </footer>
+</body>
+</html>

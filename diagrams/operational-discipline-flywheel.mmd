@@ -1,0 +1,14 @@
+graph TD
+    Failure["Failure"] --> Record["Record"]
+    Record --> Pattern["Pattern"]
+    Pattern --> Rule["Rule"]
+    Rule --> Prevention["Prevention"]
+    Prevention --> Harder["Harder Problems"]
+    Harder --> Failure
+
+    style Failure fill:#2d2d2d,stroke:#e0e0e0,color:#ffffff
+    style Record fill:#2d2d2d,stroke:#d0d0d0,color:#ffffff
+    style Pattern fill:#2d2d2d,stroke:#b0b0b0,color:#ffffff
+    style Rule fill:#2d2d2d,stroke:#a0a0a0,color:#ffffff
+    style Prevention fill:#2d2d2d,stroke:#909090,color:#ffffff
+    style Harder fill:#2d2d2d,stroke:#808080,color:#ffffff

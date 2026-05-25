@@ -1,0 +1,15 @@
+graph LR
+    Capture["Capture"] --> Manifest["Manifest"]
+    Manifest --> Gate["Gate"]
+    Gate --> Dispatch["Dispatch"]
+    Dispatch --> Execute["Execute"]
+    Execute --> Aggregate["Aggregate"]
+    Aggregate --> Close["Close-out"]
+
+    style Capture fill:#2d2d2d,stroke:#e0e0e0,color:#ffffff
+    style Manifest fill:#2d2d2d,stroke:#d0d0d0,color:#ffffff
+    style Gate fill:#2d2d2d,stroke:#b0b0b0,color:#ffffff
+    style Dispatch fill:#2d2d2d,stroke:#a0a0a0,color:#ffffff
+    style Execute fill:#2d2d2d,stroke:#909090,color:#ffffff
+    style Aggregate fill:#2d2d2d,stroke:#808080,color:#ffffff
+    style Close fill:#2d2d2d,stroke:#707070,color:#ffffff

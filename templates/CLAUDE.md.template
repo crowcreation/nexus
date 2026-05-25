@@ -1,0 +1,106 @@
+# CLAUDE.md — [Your Project Name]
+
+This file provides guidance to Claude Code when working with this repository.
+
+## Project Overview
+
+**[Project name]** — [one-line description of what this system does].
+
+**Architecture**: [key tools, frameworks, or patterns your system is built on].
+
+## Foundation Standards
+
+[Point to your canonical governance docs here. Examples:]
+
+<!-- Uncomment and adapt these as you create governance docs:
+**See [governance.md](./docs/governance.md) for**:
+- File structure and naming conventions
+- Required metadata/frontmatter fields
+- Content templates
+- Internal linking standards
+-->
+
+## Session Checklist
+
+Rules every AI session should follow in this project:
+
+1. [Scope control] Avoid full-repo scans unless required; start with targeted paths.
+2. [Format control] Provide max output length or format constraints in prompts.
+3. [Exploratory control] State "stop after summary/questions" for exploratory requests.
+4. **Before proposing any new integration or automation**, check the "Available
+   Infrastructure" section below. The most common failure mode is building something
+   that already exists.
+5. **Before designing a workaround for a generic capability**, check whether your
+   tools already provide it natively. Search for built-in tools before writing scripts.
+6. **Query live state before any recommendation or action** whose correctness depends
+   on external data. Cached data, docs, and memories go stale. When two sources
+   disagree, the live source wins.
+
+<!-- Add your own rules here as failures teach you what to check. -->
+<!-- Each rule should trace back to a specific failure in your failure log. -->
+
+## Post-Compaction Recovery
+
+When context is compressed during long sessions:
+
+1. **Re-read any active plan file** before continuing work
+2. **Verify phase status** — "started" does not mean "completed"
+3. **Confirm with user** before any phase transition
+
+**Why**: Context compaction preserves what was done but may lose what remained to do.
+
+## File Placement
+
+[Adapt this to your project's structure. The pattern is: a decision tree that
+prevents files from ending up in the wrong place.]
+
+| Content Type | Location | Example |
+|--------------|----------|---------|
+| Project-specific | `projects/<name>/` | `projects/acme/workflows/deploy.md` |
+| Reusable/evergreen | `knowledge/<domain>/` | `knowledge/devops/ci-patterns.md` |
+| Governance/templates | `admin/` | `admin/governance.md` |
+| Completed/deprecated | `archive/` | `archive/decisions/2025-tool-eval.md` |
+
+**Agent enforcement checklist**:
+1. Check for project identifiers -> place in project directory
+2. Evaluate reusability across projects -> if yes, place in knowledge directory
+3. If ambiguous, **ask the user** before creating
+
+## Quality Gates
+
+[Define your pre-commit checks and CI validations here.]
+
+<!-- Examples:
+**Pre-commit hooks** (setup: `pip install pre-commit && pre-commit install`):
+- `validate-frontmatter` — Blocks commit on metadata errors
+- `lint-check` — Blocks commit on style violations
+
+**CI**: Must pass before merge.
+-->
+
+## Available Infrastructure
+
+Check these before proposing new connections or integrations.
+
+<!-- List your existing tools, scripts, APIs, and integrations here.
+     This section prevents the "infrastructure duplication" drift mode.
+     Examples: -->
+
+<!--
+- **API scripts** (`scripts/`): list your scripts and what they do
+- **MCP servers**: list connected servers
+- **External services**: list authenticated services
+- **Utility functions** (`utils/`): shared helpers
+-->
+
+## AI Agent Guidelines
+
+**Critical behaviours**:
+- **Always verify file placement** against your structure rules before creating content
+- **Preserve existing structure** and linking patterns
+- **Never echo credentials** — reference file paths only for sensitive data
+
+**Change impact assessment** (before committing changes):
+1. **Overlap check** — Does this duplicate an existing component?
+2. **Dependency check** — What references this? What does this reference?
+3. **Registry check** — Does this require updates to configuration or index files?

@@ -1,0 +1,14 @@
+graph TD
+    L4["<b>L4: Intent</b><br/>What needs doing, why, and what constraints apply"]
+    L3["<b>L3: Approval</b><br/>Validation gates, compliance checks, human sign-off"]
+    L2["<b>L2: Transport</b><br/>Routing, retry, scheduling, deduplication"]
+    L1["<b>L1: Substrate</b><br/>File systems, APIs, connections, locks"]
+
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+
+    style L4 fill:#2d2d2d,stroke:#e0e0e0,color:#ffffff
+    style L3 fill:#2d2d2d,stroke:#b0b0b0,color:#ffffff
+    style L2 fill:#2d2d2d,stroke:#808080,color:#ffffff
+    style L1 fill:#2d2d2d,stroke:#606060,color:#ffffff
