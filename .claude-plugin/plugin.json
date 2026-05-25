@@ -1,6 +1,6 @@
 {
   "name": "nexus",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Operational discipline for Claude Code. Session pre-flight, failure logging, and branch verification. Companion to The Coherence Problem field guide.",
   "author": {
     "name": "CrowCreation",

@@ -9,7 +9,7 @@
     {
       "name": "nexus",
       "description": "Session pre-flight, failure logging, and branch verification. Companion to The Coherence Problem field guide.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "source": "./",
       "author": {
         "name": "CrowCreation",
