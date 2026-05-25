@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "nexus",
+      "repository": "https://github.com/crowcreation/nexus",
+      "version": "0.1.0"
+    }
+  ]
+}
