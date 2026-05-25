@@ -1,8 +1,27 @@
 # CLAUDE.md — Operational Discipline (Lite)
 
+## How to use
+
+Paste this into Claude Code:
+
+> Fetch https://gist.github.com/crowcreation/1809ad9f1fddbf018113b8f1712dfadb
+> and find the "Append to CLAUDE.md" section at the bottom. Append that
+> block to my existing CLAUDE.md (create one if none exists). If
+> failure-log.md already exists, leave it alone and tell me what's in
+> it so I can decide how to proceed. If it doesn't exist, create one
+> with just the heading "# Failure Log".
+
+---
+
+## What this is
+
 You are working in a system that accumulates failures silently.
 These rules prevent the five most common ways AI sessions produce
 confident, wrong outputs. Follow them every session.
+
+The full explanation of each rule is below. What gets appended to
+your CLAUDE.md is the condensed version at the bottom — just the
+operational rules, no prose.
 
 ---
 
@@ -193,3 +212,53 @@ Want this automated? Install the Nexus plugin:
 ```
 
 <https://github.com/crowcreation/nexus>
+
+---
+
+## Append to CLAUDE.md
+
+Everything below this heading is the condensed version your agent
+appends to your existing CLAUDE.md. The full explanations are above.
+
+```markdown
+## Operational Discipline
+
+<!-- Rules: https://gist.github.com/crowcreation/1809ad9f1fddbf018113b8f1712dfadb -->
+
+### Session Pre-flight
+Before ANY work: (1) check current context via git status — not what
+you remember, what's true now; (2) check what changed since last
+session; (3) verify previous assumptions still hold. Sixty seconds
+prevents doing excellent work in the wrong context.
+
+### Branch Verification
+Re-check branch immediately before every git commit. Parallel sessions
+can move HEAD between your first read and your commit. If branch
+differs from expectation: STOP and tell the user.
+
+### Live-State Check
+Before any action depending on external state, query the source now.
+Not from cache, not from docs, not from yesterday. When two sources
+disagree, the live source wins.
+
+### Failure Log
+Append to failure-log.md when something goes wrong. Format: what
+happened, root cause, category, count, prevention rule. Categories:
+SS (State Staleness), CF (Context Failure), ID (Instruction Decay),
+IDUP (Infrastructure Duplication), FL (Feedback Loss). Don't filter.
+Just record.
+
+### Three-Occurrence Rule
+Same root cause three times = system bug, not user error. Write a
+preventive rule in this file. No amount of "being more careful"
+prevents the fourth occurrence.
+
+### Infrastructure Check
+Before proposing new tools: (1) check what exists in this repo,
+(2) check built-in/native tools, (3) check connected services.
+
+### Post-Compaction Recovery
+After context compression: re-read plan files, verify phase status
+("started" does not mean "completed"), confirm with user before
+phase transitions.
+```
