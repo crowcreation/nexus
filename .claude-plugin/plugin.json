@@ -1,0 +1,21 @@
+{
+  "name": "nexus",
+  "version": "0.1.0",
+  "description": "Operational discipline for Claude Code. Session pre-flight, failure logging, and branch verification. Companion to The Coherence Problem field guide.",
+  "author": {
+    "name": "CrowCreation",
+    "email": "cmc@crowcreation.com"
+  },
+  "homepage": "https://github.com/crowcreation/nexus",
+  "repository": "https://github.com/crowcreation/nexus",
+  "license": "MIT",
+  "keywords": [
+    "coherence",
+    "operational-discipline",
+    "session-management",
+    "failure-log",
+    "pre-flight",
+    "branch-verification"
+  ],
+  "category": "productivity"
+}

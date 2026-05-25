@@ -1,0 +1,5 @@
+{
+  "failure_log_path": ".nexus/failure-log.md",
+  "expected_branch_path": ".nexus/session-state/expected-branch.txt",
+  "three_occurrence_threshold": 3
+}
