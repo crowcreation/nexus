@@ -135,13 +135,18 @@ def main():
 
         output = {
             "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
                 "additionalContext": context,
             }
         }
         print(json.dumps(output))
 
     except Exception:
-        print(json.dumps({}))
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
+            }
+        }))
 
 
 if __name__ == "__main__":
