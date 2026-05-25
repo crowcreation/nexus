@@ -1,9 +1,20 @@
 {
+  "name": "nexus",
+  "description": "Operational discipline primitives for Claude Code",
+  "owner": {
+    "name": "CrowCreation",
+    "email": "cmc@crowcreation.com"
+  },
   "plugins": [
     {
       "name": "nexus",
-      "repository": "https://github.com/crowcreation/nexus",
-      "version": "0.1.0"
+      "description": "Session pre-flight, failure logging, and branch verification. Companion to The Coherence Problem field guide.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "CrowCreation",
+        "email": "cmc@crowcreation.com"
+      }
     }
   ]
 }
