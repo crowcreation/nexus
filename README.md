@@ -10,13 +10,13 @@ A field guide to AI coordination failure
 
 You set up an AI coding assistant on a Monday. By Wednesday you've built
 more in three days than you normally build in two weeks. You add a second
-project. You start running sessions in parallel — one doing research while
+project. You start running sessions in parallel - one doing research while
 another writes code. You connect a few automations. Everything accelerates.
 
 Around week three, something shifts. Your AI suggests building a feature
 you shipped last Tuesday. You find two automations doing overlapping work
 because neither knew about the other. A session in the morning produces
-a recommendation based on data that changed by afternoon — but the
+a recommendation based on data that changed by afternoon - but the
 afternoon session doesn't know that, and acts on the stale version anyway.
 
 You fix these individually. They feel like one-off mistakes. You add more
@@ -76,7 +76,7 @@ conditions for AI coordination failure.
 
 There is a specific property that working systems have and degrading
 systems lose. It doesn't have a standard name in the AI tooling
-discourse, so it gets described indirectly — "context issues," "my AI
+discourse, so it gets described indirectly - "context issues," "my AI
 forgot," "things got out of sync." These descriptions are accurate but
 imprecise. They sound like different problems. They are the same problem.
 
@@ -92,7 +92,7 @@ can delegate work without checking whether the delegate is operating on
 last week's version of reality.
 
 This sounds like table stakes. It is, for a single session. One person,
-one AI, one conversation — coherence is free. The model holds state for
+one AI, one conversation - coherence is free. The model holds state for
 the duration. Instructions persist. Context is shared. Everything works.
 
 The trouble starts when you add a second session. Or a second day. Or
@@ -106,14 +106,14 @@ coherence degrades faster than capability improves.
 
 You don't notice at first because each session is still good. The
 model is still smart. The tools still work. The degradation is between
-components, not within them. It shows up as subtle wrongness — a
+components, not within them. It shows up as subtle wrongness - a
 recommendation that's slightly off because it's based on information
 that was true two days ago. An automation that runs correctly on
 incorrect inputs. A session that does excellent work toward a goal
 you quietly abandoned in a different session last week.
 
-And the instinct to fix it by adding more — more tools, more
-integrations, more automation layers — makes it worse. Each new
+And the instinct to fix it by adding more - more tools, more
+integrations, more automation layers - makes it worse. Each new
 component adds capability AND adds another surface where state can
 go stale, instructions can go unread, and context can fragment. The
 coordination load compounds while the capability grows linearly.
@@ -193,7 +193,7 @@ encode lessons durably.
 ---
 
 <p align="center">
-  <img src="./images/coherence-maintenance.png" alt="Coherence Maintenance — the parallel context problem and six coherence mechanisms" width="100%" />
+  <img src="./images/coherence-maintenance.png" alt="Coherence Maintenance - the parallel context problem and six coherence mechanisms" width="100%" />
 </p>
 
 ## V. Why discipline beats tooling
@@ -300,7 +300,7 @@ them aren't.
 ---
 
 <p align="center">
-  <img src="./images/four-layer-model.png" alt="The 4-Layer Nexus Model — Intent, Approval, Transport, Substrate" width="100%" />
+  <img src="./images/four-layer-model.png" alt="The 4-Layer Nexus Model - Intent, Approval, Transport, Substrate" width="100%" />
 </p>
 
 ## VII. The smallest unit of delegatable work
@@ -365,7 +365,7 @@ tell the difference.
 ---
 
 <p align="center">
-  <img src="./images/intent-packet-lifecycle.png" alt="Intent Packet Lifecycle — Capture, Manifest, Gate, Dispatch, Execute, Aggregate, Close-out" width="100%" />
+  <img src="./images/intent-packet-lifecycle.png" alt="Intent Packet Lifecycle - Capture, Manifest, Gate, Dispatch, Execute, Aggregate, Close-out" width="100%" />
 </p>
 
 ## VIII. The flywheel (or: how discipline compounds)
@@ -425,7 +425,7 @@ Discipline reduces surface area. Capability expands it.
 ---
 
 <p align="center">
-  <img src="./images/operational-discipline-flywheel.png" alt="Operational Discipline Flywheel — Failure, Record, Pattern, Rule, Prevention, Harder Problems" width="100%" />
+  <img src="./images/operational-discipline-flywheel.png" alt="Operational Discipline Flywheel - Failure, Record, Pattern, Rule, Prevention, Harder Problems" width="100%" />
 </p>
 
 ## IX. What this is and what it isn't

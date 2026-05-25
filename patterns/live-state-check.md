@@ -12,7 +12,7 @@ moved last week. The API response that changed format. The deal
 that closed while you were drafting the follow-up email.
 
 The cost of checking is seconds. The cost of not checking is a
-plausible-looking output built on wrong foundations — and the
+plausible-looking output built on wrong foundations - and the
 debugging time to figure out why it's wrong, which is always longer
 than the check would have been.
 
@@ -25,7 +25,7 @@ before execution), making recommendations (verify the facts they're
 built on).
 
 For each one, add a single step: query the live source before acting.
-Not "check if you remember it being current" — actually query it.
+Not "check if you remember it being current" - actually query it.
 
 The rule is simple. Applying it consistently is the hard part. Build
 it into your session startup checklist or your AI's configuration so

@@ -1,10 +1,10 @@
-# CLAUDE.md — [Your Project Name]
+# CLAUDE.md - [Your Project Name]
 
 This file provides guidance to Claude Code when working with this repository.
 
 ## Project Overview
 
-**[Project name]** — [one-line description of what this system does].
+**[Project name]** - [one-line description of what this system does].
 
 **Architecture**: [key tools, frameworks, or patterns your system is built on].
 
@@ -44,7 +44,7 @@ Rules every AI session should follow in this project:
 When context is compressed during long sessions:
 
 1. **Re-read any active plan file** before continuing work
-2. **Verify phase status** — "started" does not mean "completed"
+2. **Verify phase status** - "started" does not mean "completed"
 3. **Confirm with user** before any phase transition
 
 **Why**: Context compaction preserves what was done but may lose what remained to do.
@@ -72,8 +72,8 @@ prevents files from ending up in the wrong place.]
 
 <!-- Examples:
 **Pre-commit hooks** (setup: `pip install pre-commit && pre-commit install`):
-- `validate-frontmatter` — Blocks commit on metadata errors
-- `lint-check` — Blocks commit on style violations
+- `validate-frontmatter` - Blocks commit on metadata errors
+- `lint-check` - Blocks commit on style violations
 
 **CI**: Must pass before merge.
 -->
@@ -98,9 +98,9 @@ Check these before proposing new connections or integrations.
 **Critical behaviours**:
 - **Always verify file placement** against your structure rules before creating content
 - **Preserve existing structure** and linking patterns
-- **Never echo credentials** — reference file paths only for sensitive data
+- **Never echo credentials** - reference file paths only for sensitive data
 
 **Change impact assessment** (before committing changes):
-1. **Overlap check** — Does this duplicate an existing component?
-2. **Dependency check** — What references this? What does this reference?
-3. **Registry check** — Does this require updates to configuration or index files?
+1. **Overlap check** - Does this duplicate an existing component?
+2. **Dependency check** - What references this? What does this reference?
+3. **Registry check** - Does this require updates to configuration or index files?

@@ -21,7 +21,7 @@ Append-only record of AI workflow failures. Review weekly for patterns.
 ## Weekly review notes
 
 <!-- Each week, scan the log for clusters. When the same root cause appears
-     3 times, it's a system bug — write a preventive rule. -->
+     3 times, it's a system bug - write a preventive rule. -->
 
 ### Week of YYYY-MM-DD
 

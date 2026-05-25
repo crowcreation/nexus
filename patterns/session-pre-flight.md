@@ -4,7 +4,7 @@ At the start of every AI session, verify three things before doing
 any work:
 
 **What context you're in.** Which branch, which project, which
-workspace. Not what you remember from last time — what's true right
+workspace. Not what you remember from last time - what's true right
 now. Parallel sessions, overnight automations, and other operators
 can change the context between sessions without you noticing.
 
@@ -15,9 +15,9 @@ one. If you skip this step, you'll build on assumptions that may no
 longer hold.
 
 **Whether previous assumptions are still valid.** The prospect you
-were drafting an email to — is the deal still open? The file you
-were modifying — has someone else changed it? The API endpoint you
-were calling — does it still return the same format? Stale
+were drafting an email to - is the deal still open? The file you
+were modifying - has someone else changed it? The API endpoint you
+were calling - does it still return the same format? Stale
 assumptions are invisible until they produce wrong outputs.
 
 ## Why this prevents the worst failures
