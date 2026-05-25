@@ -6,7 +6,35 @@
 
 A field guide to AI coordination failure
 
-**Start here:** [Field Guide](#i-the-week-it-stops-working) · [Principles](./PRINCIPLES.md) · [Patterns](./patterns/)
+**Start here:** [Field Guide](#i-the-week-it-stops-working) · [Principles](./PRINCIPLES.md) · [Patterns](./patterns/) · [Install the plugin](#install)
+
+---
+
+### Install
+
+Nexus is a Claude Code plugin. Three primitives, everything local, nothing phones home.
+
+```
+claude plugin add crowcreation/nexus
+```
+
+Then in any project:
+
+```
+/nexus-init
+```
+
+**Session pre-flight** runs automatically at session start -- verifies your branch, checks what changed since last session, flags stale assumptions.
+
+**Failure log** (`/failure`) records what went wrong with structured drift categories. After three occurrences of the same root cause, it alerts you that the failure is structural.
+
+**Branch verification** warns before committing on the wrong branch. Opt-in: set your expected branch and it checks before every commit.
+
+When you're ready to share a pattern, `/field-report` formats your log entry for [GitHub Discussions](https://github.com/crowcreation/nexus/discussions) with redaction prompts. Nothing is sent automatically -- you paste it yourself.
+
+Privacy: no telemetry, no network calls, no data leaves your machine. [Full source](./.claude-plugin/).
+
+---
 
 ## I. The week it stops working
 
