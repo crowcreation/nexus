@@ -42,6 +42,8 @@ When you're ready to share a pattern, `/field-report` formats your log entry for
 
 Privacy: no telemetry, no network calls, no data leaves your machine. [Full source](./.claude-plugin/).
 
+**Requirements**: [Claude Code](https://claude.ai/code), Python 3.8+, Git.
+
 ---
 
 ## I. The week it stops working

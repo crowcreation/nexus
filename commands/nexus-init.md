@@ -5,6 +5,16 @@ allowed-tools: ["Write", "Read", "Bash", "Glob"]
 
 Set up the Nexus operational discipline directory for this project.
 
+## Pre-flight checks
+
+Before scaffolding, verify dependencies:
+
+1. Run `python3 --version` (or `python --version` on Windows). If neither works, tell the user: "Python 3.8+ is required for Nexus hooks. Install it from python.org before continuing."
+2. Run `git --version`. If it fails, tell the user: "Git is required for session pre-flight and branch verification."
+3. Confirm the current directory is a git repo (`git rev-parse --show-toplevel`). If not, suggest `git init`.
+
+Report any missing dependencies before proceeding. All three are required.
+
 ## Steps
 
 1. Check if `.nexus/` already exists in the project root. If it does, ask the user whether to overwrite or skip.
