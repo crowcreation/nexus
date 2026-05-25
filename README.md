@@ -14,11 +14,19 @@ A field guide to AI coordination failure
 
 Nexus is a Claude Code plugin. Three primitives, everything local, nothing phones home.
 
+**Step 1** -- Add the marketplace (one-time):
+
 ```
-claude plugin add crowcreation/nexus
+/plugin marketplace add crowcreation/nexus
 ```
 
-Then in any project:
+**Step 2** -- Install the plugin:
+
+```
+/plugin install nexus@crowcreation-nexus
+```
+
+**Step 3** -- Restart Claude Code, then in any project:
 
 ```
 /nexus-init
