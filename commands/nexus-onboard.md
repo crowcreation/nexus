@@ -31,7 +31,18 @@ Handle prerequisites automatically so the operator doesn't need to run separate 
        "three_occurrence_threshold": 3
      }
      ```
-   - Create `.nexus/failure-log.md` with just the heading `# Failure Log` and the drift category table from the failure-logging skill.
+   - Create `.nexus/failure-log.md` with the heading `# Failure Log` and this exact drift category table:
+     ```markdown
+     ## Drift Categories
+
+     | Code | Name | Signal |
+     |------|------|--------|
+     | SS | State Staleness | Acted on data that changed since you last checked |
+     | CF | Context Fragmentation | Lost track of what session/branch/project you're in |
+     | ID | Instruction Decay | Followed a rule that's outdated or contradicted |
+     | DF | Discovery Failure | Built something that already existed but wasn't findable |
+     | FL | Feedback Loss | Made the same mistake again because the lesson wasn't captured |
+     ```
    - Create `.nexus/session-state/` directory.
    - Suggest adding `.nexus/session-state/` to `.gitignore`.
    - Confirm: ".nexus/ initialised — failure log, config, and session state ready."
@@ -49,7 +60,7 @@ Ask: "What's your GitHub username? (I'll go find your repos.)"
 
 Discovery:
 - Run `gh auth status` to check if GitHub CLI is authenticated.
-- If authenticated, run: `gh repo list <username> --json name,description,language,updatedAt,isPrivate,isFork,url --limit 100`
+- If authenticated, run: `gh repo list <username> --json name,description,primaryLanguage,updatedAt,isPrivate,isFork,url --limit 100`
 - Filter out forks by default.
 - Sort by `updatedAt` descending.
 - Present a summary: "Found N repos. Here are the most recently active:" with a table of the top 10.
