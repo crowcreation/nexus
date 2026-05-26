@@ -14,16 +14,34 @@ Emotional arc: curiosity → recognition ("it found my repos!") → usefulness (
 
 ## Step 0: Pre-flight
 
-1. Check if `.nexus/` directory exists. If not:
-   - Tell the operator: "I need the .nexus/ directory first. Run `/nexus-init` to set that up — takes 30 seconds — then come back here."
-   - Stop. Do not proceed.
+Handle prerequisites automatically so the operator doesn't need to run separate commands first.
 
-2. Check if `.nexus/universe.md` already exists. If it does:
+1. Check if the current directory is a git repo (`git rev-parse --show-toplevel`). If not:
+   - Tell the operator: "This isn't a git repo yet — I'll set that up."
+   - Run `git init`.
+   - Confirm: "Git repo initialised."
+
+2. Check if `.nexus/` directory exists. If not:
+   - Tell the operator: "Setting up the .nexus/ directory for you."
+   - Create `.nexus/config.json`:
+     ```json
+     {
+       "failure_log_path": ".nexus/failure-log.md",
+       "expected_branch_path": ".nexus/session-state/expected-branch.txt",
+       "three_occurrence_threshold": 3
+     }
+     ```
+   - Create `.nexus/failure-log.md` with just the heading `# Failure Log` and the drift category table from the failure-logging skill.
+   - Create `.nexus/session-state/` directory.
+   - Suggest adding `.nexus/session-state/` to `.gitignore`.
+   - Confirm: ".nexus/ initialised — failure log, config, and session state ready."
+
+3. Check if `.nexus/universe.md` already exists. If it does:
    - Read the `completed_steps` from its YAML frontmatter.
    - Offer three choices: "You've already mapped [list completed steps]. Want to pick up where you left off, start fresh, or update what's there?"
    - If resuming, skip to the first incomplete step.
 
-3. If no existing universe.md, proceed to Step 1.
+4. If no existing universe.md, proceed to Step 1.
 
 ## Step 1: Identity & Repositories
 
