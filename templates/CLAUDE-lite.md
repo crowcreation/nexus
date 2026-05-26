@@ -25,6 +25,14 @@ instructions outlive the conversation that created them — accumulate
 drift silently. If your AI usage is mostly isolated conversations,
 many of these pathologies never emerge.
 
+This tends to become useful when:
+
+- you run multiple AI sessions against the same repo
+- instructions persist across days or weeks
+- repositories evolve between sessions
+- work happens across branches or projects simultaneously
+- repeated mistakes start feeling familiar
+
 What gets appended to your CLAUDE.md is the condensed block at the
 bottom. The full explanations are below.
 
