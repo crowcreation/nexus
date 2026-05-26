@@ -35,7 +35,7 @@ Concrete incidents are more valuable than abstract opinions.
 
 Nexus is intentionally narrow.
 
-The goal is not to build the biggest AI operating system.
+The goal is not to build the biggest system.
 The goal is to understand how coherence degrades in real workflows,
 and which disciplines prevent it.
 
