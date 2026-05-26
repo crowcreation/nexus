@@ -1,46 +1,52 @@
 # Failure Log
 
-Append-only record of AI workflow failures. Review weekly for patterns.
+Append-only record of operational friction. Review weekly for patterns.
 
-## Category codes
+<!-- ┌─────────────────────────────────────────────────────────┐
+     │  Categories                                             │
+     │  SS  State Staleness      — acted on stale data         │
+     │  CF  Context Fragmentation — lost track of context      │
+     │  ID  Instruction Decay    — followed outdated rules     │
+     │  DF  Discovery Failure    — rebuilt what already existed │
+     │  FL  Feedback Loss        — repeated a known mistake    │
+     │  UN  Uncategorised        — review weekly for patterns  │
+     │                                                         │
+     │  Severity                                               │
+     │  CONTAINED — caught before external impact              │
+     │  EXTERNAL  — affected output, client, or downstream     │
+     │                                                         │
+     │  Status                                                 │
+     │  DETECTED → PROPOSED → RULE WRITTEN → ENFORCED          │
+     └─────────────────────────────────────────────────────────┘ -->
 
-| Code | Category | Description |
-|------|----------|-------------|
-| SS | State Staleness | Acted on information that was true when cached but isn't anymore |
-| CF | Context Fragmentation | Knowledge from one session never reached another |
-| ID | Instruction Decay | Rules exist but weren't loaded or were contradicted by newer rules |
-| DF | Discovery Failure | Built something that already existed because it wasn't discoverable |
-| FL | Feedback Loss | Learned from a failure but didn't encode the lesson durably |
-| UN | Uncategorised | Doesn't fit the above — review weekly for emerging patterns |
+---
 
-## Severity
+## Entries
 
-| Value | Meaning |
-|-------|---------|
-| CONTAINED | Caught before affecting external output |
-| EXTERNAL | Affected a client, published output, or downstream system |
+<!-- Append new entries below. One entry per failure. -->
+<!-- Format:
+### YYYY-MM-DD — [short description]
+**Session**: [what you were working on]
+**What happened**: [one sentence]
+**Why**: [root cause, one sentence]
+**Category**: [SS|CF|ID|DF|FL|UN] | **Severity**: [CONTAINED|EXTERNAL]
+**Occurrences**: [Nth time this root cause has appeared]
+**Proposed rule**: [if 3+ occurrences — what would prevent the next one?]
+**Status**: DETECTED
+-->
 
-## Remediation status
+---
 
-| Value | Meaning |
-|-------|---------|
-| DETECTED | Failure recorded, no rule written yet |
-| RULE WRITTEN | Preventive rule exists but not yet enforced automatically |
-| ENFORCED | Rule is enforced via hook, gate, or automated check |
+## Weekly Review
 
-## Log
-
-| Date | What happened | Root cause | Cat | Severity | Occurrences | Preventive rule | Status |
-|------|---------------|------------|-----|----------|-------------|-----------------|--------|
-| | | | | | | | |
-
-## Weekly review notes
-
-<!-- Each week, scan the log for clusters. When the same root cause appears
-     3 times, it's a system bug - write a preventive rule. -->
+<!-- Each week, scan entries above for clusters by root cause.
+     When a root cause appears 3+ times, assess the proposed rule.
+     Promote to CLAUDE.md if it earns its place. -->
 
 ### Week of YYYY-MM-DD
 
-- Clusters found:
-- Rules written:
-- Open questions:
+- **Entries this week**:
+- **Clusters found**:
+- **Rules proposed**:
+- **Rules promoted to CLAUDE.md**:
+- **Open questions**:
