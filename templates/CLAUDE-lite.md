@@ -15,10 +15,11 @@ Paste this into Claude Code:
 
 ## What this is
 
-These rules are for persistent AI systems — where sessions run inside
-Git repos, state accumulates across sessions, and instructions outlive
-the session that wrote them. If your AI usage resets every conversation,
-you don't need this. If it doesn't, you do.
+These rules are for persistent AI systems — workflows where operational
+state survives across sessions, repositories evolve over time, and
+instructions outlive the conversation that created them. If your AI
+usage is mostly isolated conversations, many of these pathologies
+never emerge.
 
 You are working in a system that accumulates failures silently.
 These rules prevent the five most common ways persistent AI sessions
