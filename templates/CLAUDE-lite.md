@@ -54,20 +54,6 @@ doing excellent work in the wrong context.
 
 ---
 
-## Branch Verification Before Commits
-
-**Re-check the branch immediately before every `git commit`.**
-
-Do not trust the branch you saw at session start. Parallel sessions,
-automated merges, and other operators can move HEAD between your first
-read and your commit. Run `git rev-parse --abbrev-ref HEAD` right
-before staging.
-
-If the branch differs from what you expected: STOP. Tell the user.
-Do not auto-switch, auto-revert, or assume it's fine.
-
----
-
 ## Live-State Check
 
 Before any action whose correctness depends on external state:
