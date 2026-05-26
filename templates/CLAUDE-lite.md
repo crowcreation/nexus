@@ -244,9 +244,17 @@ Everything below this heading is the condensed version your agent
 appends to your existing CLAUDE.md. The full explanations are above.
 
 ```markdown
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  OPERATIONAL DISCIPLINE (Nexus CLAUDE-lite)                 ║
+     ║  Source: https://gist.github.com/crowcreation/1809ad9f1fdd  ║
+     ║  Installed: YYYY-MM-DD                                      ║
+     ║  Version: 1.0                                               ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+
 ## Operational Discipline
 
-<!-- Rules: https://gist.github.com/crowcreation/1809ad9f1fddbf018113b8f1712dfadb -->
+<!-- Failure log: ./failure-log.md | Weekly review: count by root cause -->
+<!-- Full guide: https://github.com/crowcreation/nexus -->
 
 ### Session Pre-flight
 Before ANY work: (1) check current context via git status — not what
@@ -280,4 +288,5 @@ have been. If anything went wrong, append to failure-log.md — one
 sentence each for what happened and why. If nothing went wrong,
 don't write anything.
 
+<!-- ── end operational discipline ── -->
 ```
