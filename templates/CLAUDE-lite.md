@@ -15,9 +15,14 @@ Paste this into Claude Code:
 
 ## What this is
 
+These rules are for persistent AI systems — where sessions run inside
+Git repos, state accumulates across sessions, and instructions outlive
+the session that wrote them. If your AI usage resets every conversation,
+you don't need this. If it doesn't, you do.
+
 You are working in a system that accumulates failures silently.
-These rules prevent the five most common ways AI sessions produce
-confident, wrong outputs. Follow them every session.
+These rules prevent the five most common ways persistent AI sessions
+produce confident, wrong outputs. Follow them every session.
 
 The full explanation of each rule is below. What gets appended to
 your CLAUDE.md is the condensed version at the bottom — just the

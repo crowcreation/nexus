@@ -4,9 +4,11 @@
 
 # Nexus
 
-Operational coherence for AI-assisted workflows.
+Operational coherence for persistent AI systems.
 
-AI tools are individually excellent. The failures happen in the space between them -- stale state, fragmented context, instructions that decay, lessons that don't stick. Nexus gives you the primitives to catch this before it compounds.
+When AI becomes a long-running operator inside your repo -- Claude Code sessions, CLAUDE.md files, Git branches, accumulated automations -- a specific class of failures emerges. Not capability failures. Coherence failures: stale state, fragmented context, instructions that decay, lessons that don't stick. Nexus gives you the primitives to catch this before it compounds.
+
+**This is for** developers running persistent AI workflows -- Claude Code, Cursor, Aider, Copilot Workspace -- where state accumulates across sessions, instructions outlive the session that wrote them, and multiple agents operate on the same repo. **Not for** one-shot prompting or stateless AI interactions. Those have different failure modes.
 
 **Start here:** paste [CLAUDE-lite.md](./templates/CLAUDE-lite.md) into any project ([gist](https://gist.github.com/crowcreation/1809ad9f1fddbf018113b8f1712dfadb)). Five rules, one failure log, no dependencies.
 
@@ -45,7 +47,7 @@ Privacy: no telemetry, no network calls, no data leaves your machine. [Full sour
 
 ### Go deeper
 
-- [The Coherence Problem](./docs/the-coherence-problem.md) -- the full field guide: why AI workflows degrade and the five drift modes
+- [The Coherence Problem](./docs/the-coherence-problem.md) -- the full field guide: why persistent AI systems degrade and the five drift modes
 - [Patterns](./patterns/) -- five steal-this patterns with implementation details
 - [Templates](./templates/) -- CLAUDE.md starter, CLAUDE-lite, failure log template
 - [Principles](./PRINCIPLES.md) -- twelve lines

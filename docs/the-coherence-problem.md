@@ -4,7 +4,7 @@
 
 # The Coherence Problem
 
-A field guide to AI coordination failure
+A field guide to coordination failure in persistent AI systems
 
 > For the quick start, see the [main README](../README.md).
 > For the plugin install, see [Install](../README.md#install).
@@ -100,6 +100,18 @@ This sounds like table stakes. It is, for a single session. One person,
 one AI, one conversation — coherence is free. The model holds state for
 the duration. Instructions persist. Context is shared. Everything works.
 
+It's worth being precise about where the problem lives, because it
+doesn't live everywhere. A ChatGPT conversation that resets each time
+doesn't have coherence problems — it has capability problems, context
+problems, maybe prompting problems. Different failure modes, different
+solutions. The coherence problem emerges specifically in systems where
+AI operates persistently: Git repositories with accumulated
+instructions, CLAUDE.md files that outlive the session that wrote them,
+parallel sessions sharing a codebase, automations running on state
+that other processes modify. The substrate is persistent, repo-backed,
+version-controlled operational memory — and the persistence is what
+creates the conditions for drift.
+
 The trouble starts when you add a second session. Or a second day. Or
 a second project. Or an automation that runs while you're not watching.
 Each addition is individually fine. Collectively, they create a system
@@ -131,9 +143,10 @@ operator at a time, without the benefit of the decades of vocabulary
 that distributed systems built to talk about it.
 
 The coherence problem is not a bug in any particular tool. It is an
-emergent property of multi-session, multi-tool AI workflows that
-nobody warned you about because the tools are marketed on what a
-single session can do, not on what happens when sessions accumulate.
+emergent property of persistent, multi-session AI systems that nobody
+warned you about because the tools are marketed on what a single
+session can do, not on what happens when sessions accumulate inside
+a repository over weeks and months.
 
 ## IV. A taxonomy of drift
 
