@@ -130,24 +130,29 @@ When the same root cause appears **three times** in the failure log:
 
 1. Stop treating it as a user error.
 2. Start treating it as a system bug.
-3. Write a preventive rule in this file.
+3. Draft a preventive rule — but don't add it to CLAUDE.md yet.
 
 One occurrence is an accident. Two is a coincidence. Three means the
 conditions that produce this failure are structural. No amount of
 "being more careful" prevents the fourth — the environment makes
 it likely.
 
-The response is always: write a rule, a check, or a gate that
-prevents the next occurrence. Add it to the relevant section of
-this file. If you can't prevent it automatically, make it visible
-so you catch it faster.
-
-Rules written from three-occurrence patterns go here:
+When this triggers, append a **proposed rule** to the failure log
+entry that triggered it:
 
 ```markdown
-<!-- SYSTEM RULES (derived from failure patterns) -->
-<!-- Each rule traces to 3+ entries in failure-log.md -->
+**Proposed rule:** [what check, gate, or instruction would prevent
+the next occurrence]
+**Based on:** [dates of the 3+ entries]
+**Status:** PROPOSED
 ```
+
+Rules stay in the failure log as proposals until the operator reviews
+them. The weekly review is where proposed rules get assessed — the
+operator decides whether to promote them to CLAUDE.md, refine them,
+or discard them. This keeps CLAUDE.md under the operator's control
+and makes the review the moment where accumulated failures become
+operational intelligence.
 
 ---
 
@@ -268,9 +273,9 @@ DF (Discovery Failure), FL (Feedback Loss), UN (Uncategorised). Severity: CONTAI
 Just record.
 
 ### Three-Occurrence Rule
-Same root cause three times = system bug, not user error. Write a
-preventive rule in this file. No amount of "being more careful"
-prevents the fourth occurrence.
+Same root cause three times = system bug, not user error. Draft a
+proposed rule in the failure log entry (not in this file). The
+operator reviews and promotes rules during weekly review.
 
 ### Session Close
 When the session is ending, review what happened. If anything went
