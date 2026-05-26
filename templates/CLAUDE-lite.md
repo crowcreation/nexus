@@ -187,6 +187,28 @@ your particular combination of projects.
 
 ---
 
+## Session Close
+
+When the session is ending — the user says "done", "let's wrap up",
+"that's it", or you're about to sign off:
+
+1. **Review what happened this session.** Did anything go wrong?
+   Stale data acted on, wrong branch, rebuilt something that existed,
+   followed outdated instructions, lost context from another session.
+
+2. **If something went wrong, append to failure-log.md.** One entry
+   per failure. One sentence for what happened, one for why. Pick the
+   closest category. Don't overthink it.
+
+3. **If nothing went wrong, don't write anything.** No "session
+   completed successfully" entries. The log is for failures only.
+
+This is not a chore. It takes thirty seconds. The value is in what
+the log looks like after a month — patterns you didn't notice at the
+time become visible in aggregate.
+
+---
+
 ## Quick Reference
 
 ```
@@ -194,6 +216,7 @@ SESSION START → pre-flight (context, changes, assumptions)
 BEFORE COMMIT → verify branch matches expectation
 BEFORE ACTION → live-state check on dependencies
 AFTER FAILURE → append to failure-log.md
+SESSION END   → review session, log any failures
 WEEKLY REVIEW → count by root cause, not by symptom
 THREE OCCURRENCES → write a rule, don't just "be careful"
 BEFORE BUILDING → check what exists first
@@ -254,6 +277,13 @@ prevents the fourth occurrence.
 ### Infrastructure Check
 Before proposing new tools: (1) check what exists in this repo,
 (2) check built-in/native tools, (3) check connected services.
+
+### Session Close
+When the session is ending, review what happened. If anything went
+wrong — stale data, wrong branch, rebuilt something that existed,
+followed outdated instructions — append to failure-log.md. One
+sentence each for what happened and why. If nothing went wrong,
+don't write anything.
 
 ### Resuming Interrupted Work
 When resuming after any interruption (context compression, new
