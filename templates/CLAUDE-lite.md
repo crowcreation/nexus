@@ -48,6 +48,12 @@ Before doing ANY work, verify three things:
 Sixty seconds. Prevents the worst failure mode: doing excellent
 work in the wrong context.
 
+If failure-log.md has proposed rules awaiting review and the last
+weekly review is 7+ days old, flag it briefly — "N proposed rules
+pending, paste this into a new session when ready" — and provide
+the review prompt. Don't start the review in this session. The
+operator came here to do something else.
+
 ---
 
 ## Live-State Check
@@ -198,8 +204,13 @@ What gets appended to your CLAUDE.md is below.
 ### Session Pre-flight
 Before ANY work: (1) check current context via git status — not what
 you remember, what's true now; (2) check what changed since last
-session; (3) verify previous assumptions still hold. Sixty seconds
-prevents doing excellent work in the wrong context.
+session; (3) verify previous assumptions still hold. (4) If
+failure-log.md has PROPOSED rules and the last weekly review is 7+
+days old, mention it briefly: "You have N proposed rules pending
+review. When you have a moment, paste this into a new session:
+`Read failure-log.md and run a weekly review — summarise patterns,
+assess proposed rules, recommend which to promote to CLAUDE.md.`"
+Do not start the review in this session — just flag it and move on.
 
 ### Live-State Check
 Before any action depending on external state, query the source now.
