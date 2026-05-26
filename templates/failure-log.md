@@ -26,7 +26,7 @@ Append-only record of operational friction. Review weekly for patterns.
 <!-- Append new entries below. One entry per failure. -->
 <!-- Format:
 ### YYYY-MM-DD — [short description]
-**Session**: [what you were working on]
+**Session**: [what you were working on] | **ID**: [session ID if available]
 **What happened**: [one sentence]
 **Why**: [root cause, one sentence]
 **Category**: [SS|CF|ID|DF|FL|UN] | **Severity**: [CONTAINED|EXTERNAL]
