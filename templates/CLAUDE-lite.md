@@ -219,8 +219,6 @@ AFTER FAILURE → append to failure-log.md
 SESSION END   → review session, log any failures
 WEEKLY REVIEW → count by root cause, not by symptom
 THREE OCCURRENCES → write a rule, don't just "be careful"
-BEFORE BUILDING → check what exists first
-AFTER INTERRUPTION → verify state from artifacts, not memory
 ```
 
 ---
@@ -274,10 +272,6 @@ Same root cause three times = system bug, not user error. Write a
 preventive rule in this file. No amount of "being more careful"
 prevents the fourth occurrence.
 
-### Infrastructure Check
-Before proposing new tools: (1) check what exists in this repo,
-(2) check built-in/native tools, (3) check connected services.
-
 ### Session Close
 When the session is ending, review what happened. If anything went
 wrong — stale data, wrong branch, rebuilt something that existed,
@@ -285,12 +279,4 @@ followed outdated instructions — append to failure-log.md. One
 sentence each for what happened and why. If nothing went wrong,
 don't write anything.
 
-### Resuming Interrupted Work
-When resuming after any interruption (context compression, new
-session, handoff): verify state from artifacts before continuing.
-Don't trust summaries of what was done — check what actually exists.
 ```
-
-> **Claude Code-specific**: after context compaction, re-read active
-> plan files and confirm with user before phase transitions. Compaction
-> preserves what was done but may lose what remained to do.
