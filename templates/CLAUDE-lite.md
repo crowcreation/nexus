@@ -95,7 +95,9 @@ assumption, a duplicated effort — add an entry:
 
 **What happened:** [the failure, one sentence]
 **Root cause:** [why it happened, one sentence]
-**Category:** [SS|CF|ID|IDUP|FL]
+**Category:** [SS|CF|ID|DF|FL]
+**Severity:** [CONTAINED|EXTERNAL]
+**Status:** DETECTED
 **Count:** [how many times this root cause has appeared]
 **Prevention:** [what rule would prevent the next occurrence]
 ```
@@ -105,9 +107,9 @@ assumption, a duplicated effort — add an entry:
 | Code | Name | Signal |
 |------|------|--------|
 | SS | State Staleness | Acted on data that changed since you last checked |
-| CF | Context Failure | Lost track of what session/branch/project you're in |
+| CF | Context Fragmentation | Lost track of what session/branch/project you're in |
 | ID | Instruction Decay | Followed a rule that's outdated or contradicted |
-| IDUP | Infrastructure Duplication | Built something that already existed |
+| DF | Discovery Failure | Built something that already existed but wasn't findable |
 | FL | Feedback Loss | Made the same mistake again because the lesson wasn't captured |
 
 Don't filter entries. Don't fix them inline. Just record. The minor
@@ -150,21 +152,8 @@ Before proposing any new tool, integration, script, or automation:
 2. Check what your tools provide natively (built-in commands, MCP servers, CLI flags)
 3. Check connected services (existing APIs, authenticated integrations)
 
-The most common IDUP failure is building something that already
+The most common discovery failure is building something that already
 exists two directories away, or that the platform added last month.
-
----
-
-## Post-Compaction Recovery
-
-When context is compressed during long sessions:
-
-1. Re-read any active plan file before continuing work
-2. Verify phase status — "started" does not mean "completed"
-3. Confirm with user before any phase transition
-
-Context compaction preserves what was done but may lose what
-remained to do.
 
 ---
 
@@ -201,6 +190,7 @@ AFTER FAILURE → append to failure-log.md
 WEEKLY REVIEW → count by root cause, not by symptom
 THREE OCCURRENCES → write a rule, don't just "be careful"
 BEFORE BUILDING → check what exists first
+AFTER INTERRUPTION → verify state from artifacts, not memory
 ```
 
 ---
@@ -245,7 +235,8 @@ disagree, the live source wins.
 Append to failure-log.md when something goes wrong. Format: what
 happened, root cause, category, count, prevention rule. Categories:
 SS (State Staleness), CF (Context Failure), ID (Instruction Decay),
-IDUP (Infrastructure Duplication), FL (Feedback Loss). Don't filter.
+DF (Discovery Failure), FL (Feedback Loss). Severity: CONTAINED
+(caught internally) or EXTERNAL (affected output). Don't filter.
 Just record.
 
 ### Three-Occurrence Rule
@@ -257,8 +248,12 @@ prevents the fourth occurrence.
 Before proposing new tools: (1) check what exists in this repo,
 (2) check built-in/native tools, (3) check connected services.
 
-### Post-Compaction Recovery
-After context compression: re-read plan files, verify phase status
-("started" does not mean "completed"), confirm with user before
-phase transitions.
+### Resuming Interrupted Work
+When resuming after any interruption (context compression, new
+session, handoff): verify state from artifacts before continuing.
+Don't trust summaries of what was done — check what actually exists.
 ```
+
+> **Claude Code-specific**: after context compaction, re-read active
+> plan files and confirm with user before phase transitions. Compaction
+> preserves what was done but may lose what remained to do.

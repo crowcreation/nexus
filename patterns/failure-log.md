@@ -25,7 +25,7 @@ solves one problem. The log reveals which problems are structural.
 Create a file called `failure-log.md`. Add a table or list with columns
 for date, description, root cause, and category. Use whatever categories
 emerge naturally - common ones include state staleness, context loss,
-instruction decay, infrastructure duplication, and feedback loss.
+instruction decay, discovery failure, and feedback loss.
 
 The first twenty entries will feel random. Keep going.
 

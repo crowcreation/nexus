@@ -163,12 +163,12 @@ instructions exist. They just don't execute. A governance document
 says one thing. The actual behavior does another. Nobody notices
 because nobody re-reads governance documents until something breaks.
 
-**Infrastructure duplication.** You build something that already
-exists because you couldn't find it. Your system has a script for
-checking API health, but a new session doesn't discover it and writes
-another one. You have a workflow for processing emails, but when a
-new use case arrives, a fresh approach is built from scratch because
-the existing one wasn't visible. Over time, your system accumulates
+**Discovery failure.** You build something that already exists
+because you couldn't find it. Your system has a script for checking
+API health, but a new session doesn't discover it and writes another
+one. You have a workflow for processing emails, but when a new use
+case arrives, a fresh approach is built from scratch because the
+existing one wasn't visible. Over time, your system accumulates
 overlapping tools that each solve the same problem slightly
 differently, and diverge further with each update.
 
@@ -184,16 +184,16 @@ These five modes aren't independent. State staleness causes bad
 decisions, which create context fragmentation when the correction
 only happens in one session, which leads to instruction decay when
 the rule to prevent it gets written but not propagated, which
-produces infrastructure duplication when someone builds a workaround
-instead of finding the fix, which means the original lesson is lost
+produces discovery failure when someone builds a workaround instead
+of finding the fix, which means the original lesson is lost
 again. It's a cycle. Each mode makes the others more likely.
 
 The useful thing about naming them separately is diagnosis. When
 something goes wrong, you can point at which mode failed. That
 changes the fix from "add more context" to something specific:
 check live state before acting, propagate corrections across sessions,
-audit instructions for contradictions, index existing tools, or
-encode lessons durably.
+audit instructions for contradictions, make existing tools
+discoverable, or encode lessons durably.
 
 ---
 
@@ -519,6 +519,27 @@ are finding, the Discussions are open:
 ---
 
 [Principles](../PRINCIPLES.md) · [Patterns](../patterns/) · [Templates](../templates/) · [Back to README](../README.md)
+
+## License
+
+## XII. Lineage
+
+The principles behind operational discipline are not new. Incident
+management, site reliability engineering, aviation checklists,
+observability engineering, cybernetics, and distributed systems
+theory all contributed the underlying ideas: feedback loops, failure
+classification, structured postmortems, defence in depth.
+
+The difference is not the underlying principles. The difference is
+the environment: long-lived AI-assisted workflows operated through
+probabilistic systems with compressed memory and unstable context.
+
+The vocabulary needed adaptation. The failure modes are specific to
+this environment — stale state across sessions, fragmented context
+between tools, instructions that decay silently, infrastructure that
+can't be discovered, lessons that don't survive context boundaries.
+Existing disciplines named adjacent problems. This work names these
+ones.
 
 ## License
 

@@ -14,10 +14,12 @@ Record a failure in the `.nexus/failure-log.md`. Load the `failure-logging` skil
    - **Date**: today's date (YYYY-MM-DD)
    - **What happened**: if `$ARGUMENTS` is provided, use that as a starting description. Otherwise ask. Keep it concrete and specific — what went wrong, not how you felt about it.
    - **Root cause**: probe for the underlying cause, not the surface symptom. "Acted on stale CRM data" not "email was wrong."
-   - **Category**: present the 5 drift codes (SS, CF, ID, IDUP, FL) with their one-line descriptions from the skill. Ask Claude to pick the best fit. If genuinely unclear, default to SS (state staleness) — it's the most common.
+   - **Category**: present the 5 drift codes (SS, CF, ID, DF, FL) with their one-line descriptions from the skill. Ask Claude to pick the best fit. If genuinely unclear, default to SS (state staleness) — it's the most common.
+   - **Severity**: ask whether this was CONTAINED (caught before affecting external output) or EXTERNAL (affected a client, published output, or downstream system).
    - **Occurrences**: search the existing failure-log table for entries with the same category. Count them. This new entry makes occurrences = previous count + 1.
+   - **Status**: set to DETECTED.
 
-3. **Append** a new row to the log table in `.nexus/failure-log.md`.
+3. **Append** a new row to the log table in `.nexus/failure-log.md` (including Severity and Status columns).
 
 4. **Three-occurrence check**: if the occurrence count for this category is now >= 3, output an alert:
 

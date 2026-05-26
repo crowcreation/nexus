@@ -17,14 +17,18 @@ Display a summary of the `.nexus/failure-log.md`.
    Nexus Failure Log — [total] entries
 
    Category breakdown:
-     SS  (State Staleness):           [N] entries [⚠ THREE-OCCURRENCE RULE if >= 3]
-     CF  (Context Fragmentation):     [N] entries
-     ID  (Instruction Decay):         [N] entries
-     IDUP (Infrastructure Duplication): [N] entries
-     FL  (Feedback Loss):             [N] entries
+     SS  (State Staleness):        [N] entries [⚠ THREE-OCCURRENCE RULE if >= 3]
+     CF  (Context Fragmentation):  [N] entries
+     ID  (Instruction Decay):      [N] entries
+     DF  (Discovery Failure):      [N] entries
+     FL  (Feedback Loss):          [N] entries
 
+   Severity: [N] CONTAINED / [N] EXTERNAL
    Last entry: [date] ([N] days ago)
    Three-occurrence alerts: [list categories with >= 3, or "none"]
+   Unresolved: [N] entries not yet ENFORCED
    ```
 
 4. If any category has >= 3 entries without a corresponding preventive rule in the most recent entry for that category, flag it.
+
+5. **Unresolved entries**: count entries where the Status column is not `ENFORCED`. If > 0, list the oldest 3 with their date, category, and current status.

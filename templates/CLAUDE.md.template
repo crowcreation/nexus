@@ -83,7 +83,7 @@ prevents files from ending up in the wrong place.]
 Check these before proposing new connections or integrations.
 
 <!-- List your existing tools, scripts, APIs, and integrations here.
-     This section prevents the "infrastructure duplication" drift mode.
+     This section prevents the "discovery failure" drift mode.
      Examples: -->
 
 <!--

@@ -1,12 +1,12 @@
 graph TD
     SS["State Staleness"] --> CF["Context Fragmentation"]
     CF --> ID["Instruction Decay"]
-    ID --> IDup["Infrastructure Duplication"]
-    IDup --> FL["Feedback Loss"]
+    ID --> DF["Discovery Failure"]
+    DF --> FL["Feedback Loss"]
     FL --> SS
 
     style SS fill:#2d2d2d,stroke:#e0e0e0,color:#ffffff
     style CF fill:#2d2d2d,stroke:#d0d0d0,color:#ffffff
     style ID fill:#2d2d2d,stroke:#b0b0b0,color:#ffffff
-    style IDup fill:#2d2d2d,stroke:#a0a0a0,color:#ffffff
+    style DF fill:#2d2d2d,stroke:#a0a0a0,color:#ffffff
     style FL fill:#2d2d2d,stroke:#909090,color:#ffffff

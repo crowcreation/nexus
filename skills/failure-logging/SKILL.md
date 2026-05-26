@@ -12,7 +12,7 @@ When recording a failure, classify it using one of these five categories:
 | SS | State Staleness | Acted on information that was true when cached but isn't anymore | "Was the data I used still current?" |
 | CF | Context Fragmentation | Knowledge from one session never reached another | "Did another session or person already handle this?" |
 | ID | Instruction Decay | Rules exist but weren't loaded or were contradicted by newer rules | "Is there a rule for this that I missed or that conflicts?" |
-| IDUP | Infrastructure Duplication | Built something that already existed because it wasn't discoverable | "Does this already exist somewhere I didn't check?" |
+| DF | Discovery Failure | Built something that already existed because it wasn't discoverable | "Does this already exist somewhere I didn't check?" |
 | FL | Feedback Loss | Learned from a failure but didn't encode the lesson durably | "Have I seen this before and failed to write it down?" |
 
 ## The Three-Occurrence Rule
@@ -25,6 +25,27 @@ At 3 occurrences:
 3. Record the rule in the failure log's "Preventive rule" column
 
 The rule doesn't need to be perfect. It needs to exist. A rough rule that catches 80% of recurrences is better than no rule that catches none.
+
+## Severity
+
+Each failure entry records blast radius:
+
+| Value | Meaning |
+|-------|---------|
+| CONTAINED | Caught before affecting external output |
+| EXTERNAL | Affected a client, published output, or downstream system |
+
+## Remediation Tracking
+
+Each entry tracks progress from detection to enforcement:
+
+| Status | Meaning |
+|--------|---------|
+| DETECTED | Failure recorded, no rule written yet |
+| RULE WRITTEN | Preventive rule exists but not yet enforced automatically |
+| ENFORCED | Rule is enforced via hook, gate, or automated check |
+
+New entries start at DETECTED. Update the status as remediation progresses. The `/nexus-status` command reports unresolved (non-ENFORCED) entries.
 
 ## Writing Preventive Rules
 
