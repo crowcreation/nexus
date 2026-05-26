@@ -37,6 +37,7 @@ Nexus is a Claude Code plugin. Three primitives, everything local, nothing phone
 - **Session pre-flight** -- verifies your branch, checks what changed, flags stale assumptions. Runs automatically.
 - **Failure log** (`/failure`) -- structured drift categories. Three occurrences of the same root cause triggers an alert.
 - **Branch verification** -- warns before committing on the wrong branch.
+- **Universe mapping** (`/nexus-onboard`) -- guided flow to document your repos, websites, tools, and projects as queryable AI context.
 - **Field reports** (`/field-report`) -- formats log entries for [Discussions](https://github.com/crowcreation/nexus/discussions) with redaction prompts. Nothing sent automatically.
 
 Privacy: no telemetry, no network calls, no data leaves your machine. [Full source](./.claude-plugin/).

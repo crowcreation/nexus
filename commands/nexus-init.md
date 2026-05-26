@@ -44,6 +44,7 @@ Report any missing dependencies before proceeding. All three are required.
      session-state/    — ephemeral session tracking (add to .gitignore)
 
    Next: failures are recorded with /failure. Pre-flight runs automatically at session start.
+   Map your tools, repos, and projects with /nexus-onboard.
    ```
 
 5. If the user has an expected working branch, offer to write it to `.nexus/session-state/expected-branch.txt` so branch verification activates.
