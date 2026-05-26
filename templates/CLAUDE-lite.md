@@ -197,9 +197,10 @@ your particular combination of projects.
 When the session is ending — the user says "done", "let's wrap up",
 "that's it", or you're about to sign off:
 
-1. **Review what happened this session.** Did anything go wrong?
-   Stale data acted on, wrong branch, rebuilt something that existed,
-   followed outdated instructions, lost context from another session.
+1. **Review what happened this session.** Scan for friction: wasted
+   effort, stale assumptions, repeated work, confused context,
+   misunderstood intent, or anything that felt harder than it should
+   have been.
 
 2. **If something went wrong, append to failure-log.md.** One entry
    per failure. One sentence for what happened, one for why. Pick the
@@ -218,12 +219,11 @@ time become visible in aggregate.
 
 ```
 SESSION START → pre-flight (context, changes, assumptions)
-BEFORE COMMIT → verify branch matches expectation
 BEFORE ACTION → live-state check on dependencies
 AFTER FAILURE → append to failure-log.md
-SESSION END   → review session, log any failures
+SESSION END   → scan for friction, log any failures
 WEEKLY REVIEW → count by root cause, not by symptom
-THREE OCCURRENCES → write a rule, don't just "be careful"
+THREE OCCURRENCES → propose a rule, review before promoting
 ```
 
 ---
@@ -254,11 +254,6 @@ you remember, what's true now; (2) check what changed since last
 session; (3) verify previous assumptions still hold. Sixty seconds
 prevents doing excellent work in the wrong context.
 
-### Branch Verification
-Re-check branch immediately before every git commit. Parallel sessions
-can move HEAD between your first read and your commit. If branch
-differs from expectation: STOP and tell the user.
-
 ### Live-State Check
 Before any action depending on external state, query the source now.
 Not from cache, not from docs, not from yesterday. When two sources
@@ -278,9 +273,10 @@ proposed rule in the failure log entry (not in this file). The
 operator reviews and promotes rules during weekly review.
 
 ### Session Close
-When the session is ending, review what happened. If anything went
-wrong — stale data, wrong branch, rebuilt something that existed,
-followed outdated instructions — append to failure-log.md. One
+When the session is ending, review what happened. Look for friction:
+wasted effort, stale assumptions, repeated work, confused context,
+misunderstood intent, or anything that felt harder than it should
+have been. If anything went wrong, append to failure-log.md — one
 sentence each for what happened and why. If nothing went wrong,
 don't write anything.
 
