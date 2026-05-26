@@ -77,7 +77,7 @@ def main():
             if last_head and last_head != head:
                 log = git([
                     "log", "--oneline",
-                    f"{last_head}..HEAD", "--", "2>/dev/null",
+                    f"{last_head}..HEAD",
                 ])
                 if log:
                     commit_count = len(log.strip().splitlines())
