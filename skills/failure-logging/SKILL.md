@@ -5,7 +5,7 @@ description: "Use when recording AI workflow failures, reviewing failure pattern
 
 ## Drift Categories
 
-When recording a failure, classify it using one of these five categories:
+When recording a failure, classify it using one of these categories:
 
 | Code | Category | What it means | Diagnostic question |
 |------|----------|---------------|-------------------|
@@ -14,6 +14,7 @@ When recording a failure, classify it using one of these five categories:
 | ID | Instruction Decay | Rules exist but weren't loaded or were contradicted by newer rules | "Is there a rule for this that I missed or that conflicts?" |
 | DF | Discovery Failure | Built something that already existed because it wasn't discoverable | "Does this already exist somewhere I didn't check?" |
 | FL | Feedback Loss | Learned from a failure but didn't encode the lesson durably | "Have I seen this before and failed to write it down?" |
+| UN | Uncategorised | Doesn't fit the above categories | "Review weekly — 3+ UN entries with similar causes may indicate a new category" |
 
 ## The Three-Occurrence Rule
 

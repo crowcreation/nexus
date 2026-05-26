@@ -11,6 +11,7 @@ Append-only record of AI workflow failures. Review weekly for patterns.
 | ID | Instruction Decay | Rules exist but weren't loaded or were contradicted by newer rules |
 | DF | Discovery Failure | Built something that already existed because it wasn't discoverable |
 | FL | Feedback Loss | Learned from a failure but didn't encode the lesson durably |
+| UN | Uncategorised | Doesn't fit the above — review weekly for emerging patterns |
 
 ## Severity
 

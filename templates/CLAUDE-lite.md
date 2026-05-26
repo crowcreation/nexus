@@ -100,7 +100,7 @@ assumption, a duplicated effort — add an entry:
 
 **What happened:** [the failure, one sentence]
 **Root cause:** [why it happened, one sentence]
-**Category:** [SS|CF|ID|DF|FL]
+**Category:** [SS|CF|ID|DF|FL|UN]
 **Severity:** [CONTAINED|EXTERNAL]
 **Status:** DETECTED
 **Count:** [how many times this root cause has appeared]
@@ -116,6 +116,7 @@ assumption, a duplicated effort — add an entry:
 | ID | Instruction Decay | Followed a rule that's outdated or contradicted |
 | DF | Discovery Failure | Built something that already existed but wasn't findable |
 | FL | Feedback Loss | Made the same mistake again because the lesson wasn't captured |
+| UN | Uncategorised | Doesn't fit the above — review weekly for emerging patterns |
 
 Don't filter entries. Don't fix them inline. Just record. The minor
 failures are where patterns hide.
@@ -239,8 +240,8 @@ disagree, the live source wins.
 ### Failure Log
 Append to failure-log.md when something goes wrong. Format: what
 happened, root cause, category, count, prevention rule. Categories:
-SS (State Staleness), CF (Context Failure), ID (Instruction Decay),
-DF (Discovery Failure), FL (Feedback Loss). Severity: CONTAINED
+SS (State Staleness), CF (Context Fragmentation), ID (Instruction Decay),
+DF (Discovery Failure), FL (Feedback Loss), UN (Uncategorised). Severity: CONTAINED
 (caught internally) or EXTERNAL (affected output). Don't filter.
 Just record.
 
