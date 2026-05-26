@@ -8,6 +8,7 @@ Append-only record of operational friction. Review weekly for patterns.
      │  CF  Context Fragmentation — lost track of context      │
      │  ID  Instruction Decay    — followed outdated rules     │
      │  DF  Discovery Failure    — rebuilt what already existed │
+     │  CO  Coordination Failure — agents correct, system wrong │
      │  FL  Feedback Loss        — repeated a known mistake    │
      │  UN  Uncategorised        — review weekly for patterns  │
      │                                                         │
@@ -29,7 +30,7 @@ Append-only record of operational friction. Review weekly for patterns.
 **Session**: [what you were working on] | **ID**: [session ID if available]
 **What happened**: [one sentence]
 **Why**: [root cause, one sentence]
-**Category**: [SS|CF|ID|DF|FL|UN] | **Severity**: [CONTAINED|EXTERNAL]
+**Category**: [SS|CF|ID|DF|CO|FL|UN] | **Severity**: [CONTAINED|EXTERNAL]
 **Occurrences**: [Nth time this root cause has appeared]
 **Proposed rule**: [if 3+ occurrences — what would prevent the next one?]
 **Status**: DETECTED

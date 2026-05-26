@@ -14,7 +14,7 @@ Record a failure in the `.nexus/failure-log.md`. Load the `failure-logging` skil
    - **Date**: today's date (YYYY-MM-DD)
    - **What happened**: if `$ARGUMENTS` is provided, use that as a starting description. Otherwise ask. Keep it concrete and specific — what went wrong, not how you felt about it.
    - **Root cause**: probe for the underlying cause, not the surface symptom. "Acted on stale CRM data" not "email was wrong."
-   - **Category**: present the 6 drift codes (SS, CF, ID, DF, FL, UN) with their one-line descriptions from the skill. Ask Claude to pick the best fit. Use UN (Uncategorised) when the failure genuinely doesn't fit the other five — review UN entries weekly for emerging patterns.
+   - **Category**: present the 7 drift codes (SS, CF, ID, DF, CO, FL, UN) with their one-line descriptions from the skill. Ask Claude to pick the best fit. Use UN (Uncategorised) when the failure genuinely doesn't fit the other five — review UN entries weekly for emerging patterns.
    - **Severity**: ask whether this was CONTAINED (caught before affecting external output) or EXTERNAL (affected a client, published output, or downstream system).
    - **Occurrences**: search the existing failure-log table for entries with the same category. Count them. This new entry makes occurrences = previous count + 1.
    - **Status**: set to DETECTED.
