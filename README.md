@@ -6,7 +6,7 @@
 
 Operational coherence for persistent AI systems.
 
-When AI becomes a long-running operator inside your repo -- Claude Code sessions, CLAUDE.md files, Git branches, accumulated automations -- a specific class of failures emerges. Not capability failures. Coherence failures: stale state, fragmented context, instructions that decay, lessons that don't stick. Nexus gives you the primitives to catch this before it compounds.
+When AI becomes a long-running operator inside your repo -- Claude Code sessions, CLAUDE.md files, Git branches, accumulated automations -- a specific class of failures emerges. Not capability failures. Coherence failures: stale state, fragmented context, instructions that decay, lessons that don't stick. Nexus documents the patterns and gives you primitives to catch this before it compounds. These are field notes from active operations, not a fixed framework -- expect them to evolve as tooling matures.
 
 **This is for** developers running persistent AI workflows -- Claude Code, Cursor, Aider, Copilot Workspace -- where state accumulates across sessions, instructions outlive the session that wrote them, and multiple agents operate on the same repo. **Not for** one-shot prompting or stateless AI interactions. Those have different failure modes.
 

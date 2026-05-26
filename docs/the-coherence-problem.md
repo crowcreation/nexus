@@ -151,7 +151,12 @@ a repository over weeks and months.
 ## IV. A taxonomy of drift
 
 Coherence doesn't fail in one way. It fails in five, and they feed
-each other.
+each other. These categories are observed patterns from current-era
+tooling and workflows -- not permanent laws. Some may fade as
+substrate tooling matures (better caching, improved search, native
+session management). Others appear fundamental to how language models
+operate inside persistent systems. Expect this taxonomy to evolve as
+the field accumulates more operational experience.
 
 **State staleness.** You act on information that was true when you last
 checked and isn't anymore. A session drafts an email to a prospect
@@ -469,12 +474,18 @@ is in the failure log. The system breaks less now than it did six
 months ago, not because the tools improved, but because the rules
 accumulated.
 
-What transfers: the patterns, not the implementation. The 4-layer
-diagnostic model. The explicit-boundaries approach to delegation.
-The failure-log-to-rule pipeline. The principle that discipline
-compounds. You could build these on a different stack, in a different
-domain, with different tools. The patterns would survive the port.
-The scripts wouldn't, and aren't meant to.
+What transfers: the patterns, not the implementation. The diagnostic
+model. The explicit-boundaries approach to delegation. The
+failure-log-to-rule pipeline. The principle that discipline compounds.
+You could build these on a different stack, in a different domain,
+with different tools. The patterns would survive the port. The
+scripts wouldn't, and aren't meant to.
+
+This is an evolving field manual, not finished doctrine. As substrate
+tooling matures — worktrees, session management, agentic frameworks
+— some of the pain documented here will resolve at lower layers.
+New pain will emerge at higher ones. The taxonomy and patterns will
+evolve alongside.
 
 ## X. Patterns you can steal
 
