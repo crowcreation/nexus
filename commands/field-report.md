@@ -34,11 +34,15 @@ If `$ARGUMENTS` contains a date or entry number (e.g., `/field-report 2026-05-25
 *Filed via [Nexus](https://github.com/crowcreation/nexus) failure log*
 ```
 
-1. **Output** the markdown and a pre-filled Discussion URL. URL-encode the markdown body and append it as a `body` parameter:
-   - Failure Patterns: `https://github.com/crowcreation/nexus/discussions/new?category=failure-patterns&body=<URL-encoded markdown>`
-   - Drift Incidents: `https://github.com/crowcreation/nexus/discussions/new?category=drift-incidents&body=<URL-encoded markdown>`
+1. **Generate a title** from the root cause or incident description — short, specific, no category prefix. Example: "Parallel session committed to the wrong branch after context switch"
+2. **Output** three things:
+   - The suggested **title** (one line)
+   - The **body** as a fenced markdown block (copy-paste ready)
+   - A **Discussion link** with only the category pre-selected (do NOT URL-encode the body into the URL — long encoded bodies break across lines):
+     - Failure Patterns: `https://github.com/crowcreation/nexus/discussions/new?category=failure-patterns`
+     - Drift Incidents: `https://github.com/crowcreation/nexus/discussions/new?category=drift-incidents`
 
-Tell the user: "Click the link below to open a new Discussion with the content pre-filled. Review it, edit if needed, and post. Nothing is sent until you click Submit."
+Tell the user: "Click the link, paste the title and body, review, and post. Nothing is sent until you click Submit."
 
 ## Synthesis mode
 
@@ -79,10 +83,14 @@ If `$ARGUMENTS` is empty or contains `--synthesis`:
 *Filed via [Nexus](https://github.com/crowcreation/nexus) failure log*
 ```
 
-1. **Output** the markdown and a pre-filled Discussion URL. URL-encode the markdown body and append it as a `body` parameter:
-   - Field Reports: `https://github.com/crowcreation/nexus/discussions/new?category=field-reports&body=<URL-encoded markdown>`
+1. **Generate a title** — summarise the report in one line. Example: "Field Report — 3 state-staleness failures in parallel sessions over 2 weeks"
+2. **Output** three things:
+   - The suggested **title** (one line)
+   - The **body** as a fenced markdown block (copy-paste ready)
+   - A **Discussion link** with only the category pre-selected (do NOT URL-encode the body into the URL — long encoded bodies break across lines):
+     - Field Reports: `https://github.com/crowcreation/nexus/discussions/new?category=field-reports`
 
-Tell the user: "Click the link below to open a new Discussion with the content pre-filled. Review it, edit if needed, and post. Nothing is sent until you click Submit."
+Tell the user: "Click the link, paste the title and body, review, and post. Nothing is sent until you click Submit."
 
 ## Privacy contract
 
