@@ -2,14 +2,36 @@
 
 ## How to use
 
-Paste this into Claude Code:
+Paste this prompt into your AI coding environment (Claude Code, Cursor, Windsurf, Codex, or similar):
 
 > Fetch https://gist.github.com/crowcreation/1809ad9f1fddbf018113b8f1712dfadb
-> and find the "Append to CLAUDE.md" section at the bottom. Append that
-> block to my existing CLAUDE.md (create one if none exists). If
-> failure-log.md already exists, leave it alone and tell me what's in
-> it so I can decide how to proceed. If it doesn't exist, create one
-> with just the heading "# Failure Log".
+>
+> This contains five operational discipline patterns for persistent AI
+> workflows. Before applying them:
+>
+> 0. Check that this is a version-controlled repo and that you're in a
+>    persistent environment where these instructions carry between
+>    sessions. If not, stop — these patterns are designed for persistent
+>    AI workflows and won't add value here.
+> 1. Find all custom instruction files that apply to this repo —
+>    project-level and any inherited from parent directories or global
+>    config. Read them.
+> 2. Read the five pattern explanations in the gist (Session Pre-flight,
+>    Live-State Check, Failure Log, Three-Occurrence Rule, Session Close).
+> 3. For each pattern, check whether the existing instructions already
+>    cover it — even partially or in different words.
+> 4. Draft rules only for the gaps. Match the voice, formatting, and
+>    conventions of the existing instruction files. Keep rules concise
+>    but complete. Mark the added section with a short comment noting
+>    its source so you can find and update these rules later.
+> 5. If no instruction files exist at any level, use the "Reference
+>    block" at the bottom of the gist as-is and create the instruction
+>    file.
+> 6. If failure-log.md already exists, leave it alone and tell me
+>    what's in it. If it doesn't exist, create one with just the
+>    heading "# Failure Log".
+>
+> Show me what you'll add before writing it.
 
 ---
 
@@ -33,8 +55,10 @@ This tends to become useful when:
 - work happens across branches or projects simultaneously
 - repeated mistakes start feeling familiar
 
-What gets appended to your CLAUDE.md is the condensed block at the
-bottom. The full explanations are below.
+The prompt above reads your existing instruction files and drafts
+rules only for gaps. The full explanations of each pattern are below.
+The reference block at the bottom is for repos with no existing
+instructions.
 
 ---
 
@@ -192,9 +216,11 @@ These checks can be automated. The discipline cannot.
 
 ---
 
-## Append to CLAUDE.md
+## Reference block
 
-What gets appended to your CLAUDE.md is below.
+For repos with no existing instruction files, this is the complete
+block. If you used the prompt above, your agent drafted something
+tailored instead — this is here for reference.
 
 ```markdown
 <!-- ╔══════════════════════════════════════════════════════════════╗
