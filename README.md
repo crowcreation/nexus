@@ -49,6 +49,7 @@ Privacy: no telemetry, no network calls, no data leaves your machine. [Full sour
 ### Go deeper
 
 - [The Coherence Problem](./docs/the-coherence-problem.md) -- the full field guide: why persistent AI systems degrade and the five drift modes
+- [The Operator Stack](./docs/the-operator-stack.md) -- five layers, from substrate to shared intelligence
 - [Patterns](./patterns/) -- five steal-this patterns with implementation details
 - [Templates](./templates/) -- CLAUDE.md starter, CLAUDE-lite, failure log template
 - [Principles](./PRINCIPLES.md) -- twelve lines
