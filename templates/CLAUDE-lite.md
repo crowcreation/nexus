@@ -21,10 +21,15 @@ Paste this prompt into your AI coding environment (Claude Code, Cursor, Windsurf
 >    drafting rules.
 > 4. For each pattern, check whether the existing instructions already
 >    cover it — even partially or in different words.
-> 5. Draft rules only for the gaps. Match the voice, formatting, and
->    conventions of the existing instruction files. Keep rules concise
->    but complete. Mark the added section with a short comment noting
->    its source so you can find and update these rules later.
+> 5. Draft rules only for the gaps. Important constraints:
+>    - Each pattern rule must be 2-4 sentences. No bullet sub-points,
+>      no architecture-specific references. These are generic
+>      operational habits, not instructions tied to specific tools,
+>      services, or infrastructure in this repo.
+>    - Match the voice and formatting conventions of the existing
+>      instruction files.
+>    - Mark the added section with a short comment noting its source
+>      so you can find and update these rules later.
 > 6. If no instruction files exist at any level, use the "Reference
 >    block" at the bottom of the gist as-is and create the instruction
 >    file.
