@@ -9,25 +9,26 @@ Paste this prompt into your AI coding environment (Claude Code, Cursor, Windsurf
 > This contains five operational discipline patterns for persistent AI
 > workflows. Before applying them:
 >
-> 0. Check that this is a version-controlled repo and that you're in a
->    persistent environment where these instructions carry between
->    sessions. If not, stop — these patterns are designed for persistent
->    AI workflows and won't add value here.
-> 1. Find all custom instruction files that apply to this repo —
+> 1. Check whether this is a persistent AI workflow — where
+>    instructions, repositories, and operational state survive across
+>    sessions. If not, many of these patterns will have limited value.
+> 2. Find all custom instruction files that apply to this repo —
 >    project-level and any inherited from parent directories or global
 >    config. Read them.
-> 2. Read the five pattern explanations in the gist (Session Pre-flight,
->    Live-State Check, Failure Log, Three-Occurrence Rule, Session Close).
-> 3. For each pattern, check whether the existing instructions already
+> 3. Read the five operational patterns in the gist (Session
+>    Pre-flight, Live-State Check, Failure Log, Three-Occurrence Rule,
+>    Session Close) and understand the intent behind each before
+>    drafting rules.
+> 4. For each pattern, check whether the existing instructions already
 >    cover it — even partially or in different words.
-> 4. Draft rules only for the gaps. Match the voice, formatting, and
+> 5. Draft rules only for the gaps. Match the voice, formatting, and
 >    conventions of the existing instruction files. Keep rules concise
 >    but complete. Mark the added section with a short comment noting
 >    its source so you can find and update these rules later.
-> 5. If no instruction files exist at any level, use the "Reference
+> 6. If no instruction files exist at any level, use the "Reference
 >    block" at the bottom of the gist as-is and create the instruction
 >    file.
-> 6. If failure-log.md already exists, leave it alone and tell me
+> 7. If failure-log.md already exists, leave it alone and tell me
 >    what's in it. If it doesn't exist, create one with just the
 >    heading "# Failure Log".
 >
