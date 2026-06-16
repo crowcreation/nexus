@@ -29,3 +29,5 @@ The arc is not a plan you execute top to bottom. It is a direction. Each piece e
 → Pattern: [The Narrow Contract](../patterns/narrow-contract.md)
 → Full guide: [The Operator Stack](../docs/the-operator-stack.md)
 → Full field guide: [The Coherence Problem](../docs/the-coherence-problem.md)
+
+**Next:** [Back to the course index](./README.md)

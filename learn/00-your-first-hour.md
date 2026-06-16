@@ -1,5 +1,7 @@
 # Your First Hour
 
+<!-- TODO: quickstart diagram - "five tiny things" (Goal · universe.md · Knowledge base · Failure log · /done). Generate at learn/images/five-things-day-one.png via gpt-image-2 (--quality high) and embed here. Blocked at build time: OpenAI image billing hard limit reached. -->
+
 This is the quickstart. Day one is deliberately small. You are not installing ninety commands or wiring up a fleet of agents. You are setting up five small things and learning one command.
 
 ## The five tiny day-one things
@@ -33,3 +35,5 @@ The point of day one is not to be impressive. On day one your system is reading 
 
 → Template: [universe.md](../templates/universe.md)
 → Template: [CLAUDE-lite.md](../templates/CLAUDE-lite.md)
+
+**Next:** [01 · Why This Exists](./01-why-and-vision.md)

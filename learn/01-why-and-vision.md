@@ -38,3 +38,5 @@ Your relationship with AI is personal, and you should own it: you, not the corpo
 
 → Full field guide: [The Coherence Problem](../docs/the-coherence-problem.md)
 → Principles: [twelve lines](../PRINCIPLES.md)
+
+**Next:** [02 · The Substrate](./02-the-substrate.md)

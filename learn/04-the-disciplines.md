@@ -26,16 +26,20 @@ One occurrence is an accident. Two is a coincidence. Three means the conditions 
 
 So when the same root cause shows up three times, you stop treating it as a user error and start treating it as a system bug. You write a rule, a check, or a gate that prevents the next one. Count by root cause, not by surface symptom: a bad email draft and a wrong API call can be the same underlying failure wearing different clothes.
 
-## The weekly hour and the cohort, which is the deal
+## The weekly review
 
-Once a week, set aside about an hour. Read the failure log and count entries by root cause. If any cause has hit three, write one prevention rule. Tidy each project's current state and next step. Turn anything you explained twice into a proper knowledge page. Then ask what the week should be.
+The weekly review is a named discipline in its own right, the one that turns daily capture into compounding. Once a week, set aside about an hour. Read the failure log and count entries by root cause. If any cause has hit three, write one prevention rule. Tidy each project's current state and next step. Reconcile `universe.md` against reality. Turn anything you explained twice into a proper knowledge page. Then ask what the week should be.
 
-The contract is blunt: the system gives back what you put in, with interest. Skipping the weekly hour does not pause the experiment, it ends it.
+The contract is blunt: the system gives back what you put in, with interest. Skipping the weekly review does not pause the experiment, it ends it.
 
-When you are working as a cohort, there is one more habit: a weekly meet where operators compare failure logs and share field reports. That comparison is the deal, the way trust is built through observation. The next module covers it.
+## The cohort, which is the deal
+
+When you are working as a cohort, the weekly review carries one more habit: a weekly meet where operators compare failure logs and share field reports. The weekly review is explicitly part of the cohort deal, not just a solo chore. That comparison is the deal, the way trust is built through observation. The next module covers it.
 
 ---
 
 → Pattern: [The Failure Log](../patterns/failure-log.md)
 → Pattern: [The Session Pre-flight](../patterns/session-pre-flight.md)
 → Pattern: [The Three-Occurrence Rule](../patterns/three-occurrence-rule.md)
+
+**Next:** [05 · Working Together](./05-working-together.md)

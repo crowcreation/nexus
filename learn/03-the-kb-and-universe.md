@@ -18,7 +18,7 @@ So `universe.md` is kept alive through a simple lifecycle:
 
 - **Seeded at setup.** The setup interview produces a first rough version.
 - **Nudged by `/done`.** When a session actually changes your world, by adding a tool or starting a project, the close-of-session ritual offers to update the map. Not every session, only when the world moved.
-- **Reconciled in the weekly hour.** This is the main mechanism. Once a week you tidy the map against reality. This matches the pace at which it tends to drift.
+- **Reconciled in the weekly review.** This is the main mechanism. Once a week you tidy the map against reality. This matches the pace at which it tends to drift.
 - **Flagged by `/status`.** When you have the `/status` command later, it can point out drift, but it never writes to the map itself.
 
 ## How the knowledge base grows
@@ -29,13 +29,21 @@ The one rule is that it grows through use and is never pre-filled. You do not bu
 
 A light convention keeps it usable: one topic per file, plain markdown, a short summary at the top with details below, and related pages linked liberally. There is no heavy structure to learn on day one.
 
-## How the daily note and weekly hour keep it alive
+## How the daily note and weekly review keep it alive
 
 Each session close appends a short daily note: what you did, and anything left half-finished. These accumulate into a quiet record of the work.
 
-The weekly hour is where the map and the knowledge base get tended together: reconcile the map, tidy each project's current state and next step, and turn anything you explained to your AI twice this week into a single proper knowledge page. The system gives back what you put in, with interest.
+The weekly review is where the map and the knowledge base get tended together: reconcile the map, tidy each project's current state and next step, and turn anything you explained to your AI twice this week into a single proper knowledge page. The system gives back what you put in, with interest.
+
+## A light convention, Obsidian-friendly
+
+The frontmatter is deliberately light: four fields on every note and overview, no more. `title`, `status`, `tags`, and `updated`. A fuller schema is a graduation step, not a day-one cost.
+
+Because everything is plain markdown in folders, the knowledge base opens cleanly as an [Obsidian](https://obsidian.md) vault. Link related pages with vault-relative paths (for example `/KB/Knowledge/some-topic.md`), and a minimal setup with the `obsidian-git` and `dataview` community plugins gives you version-controlled notes and live queries over your frontmatter without leaving markdown.
 
 ---
 
 → Template: [universe.md](../templates/universe.md)
 → Full guide: [The Operator Stack](../docs/the-operator-stack.md)
+
+**Next:** [04 · The Disciplines](./04-the-disciplines.md)

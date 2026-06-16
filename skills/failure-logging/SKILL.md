@@ -47,7 +47,7 @@ Each entry tracks progress from detection to enforcement:
 | RULE WRITTEN | Preventive rule exists but not yet enforced automatically |
 | ENFORCED | Rule is enforced via hook, gate, or automated check |
 
-New entries start at DETECTED. Update the status as remediation progresses. The `/nexus-status` command reports unresolved (non-ENFORCED) entries.
+New entries start at DETECTED. Update the status as remediation progresses. The `/status` command surfaces failure-log patterns, including any root cause at three or more occurrences.
 
 ## Writing Preventive Rules
 

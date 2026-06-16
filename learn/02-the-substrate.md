@@ -33,6 +33,8 @@ Plain markdown in a git repository you control gives you three things that matte
 
 Vendors ship features. They cannot ship your habits, your accumulated rules, or your record of what broke. Those stay with you, in markdown, under git.
 
+One discipline keeps this honest: transparency lives in the markdown, but secrets stay local. API keys and tokens go in a local `.env` that is gitignored and never committed; the repo ships only a placeholder `.env.example`. You own and can read everything in the repo precisely because the one thing that must not be there, your secrets, never is.
+
 ## Stand on the shoulders of giants
 
 A guiding principle sits underneath all of this: build on existing infrastructure, do not reinvent it. Git already solved version control. Claude and similar tools already solved the intelligence. You ride that wave rather than rebuilding it. The work is in the discipline and the memory you layer on top, not in re-solving problems that mature engineering already solved.
@@ -41,3 +43,5 @@ A guiding principle sits underneath all of this: build on existing infrastructur
 
 → Full guide: [The Operator Stack](../docs/the-operator-stack.md)
 → Principles: [twelve lines](../PRINCIPLES.md)
+
+**Next:** [03 · The KB and Your Universe](./03-the-kb-and-universe.md)

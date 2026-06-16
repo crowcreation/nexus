@@ -16,7 +16,7 @@ If you only do one thing, read [Your First Hour](./00-your-first-hour.md). It de
 | [01: Why This Exists](./01-why-and-vision.md) | The coherence problem in plain language, and the vision behind it |
 | [02: The Substrate](./02-the-substrate.md) | Git plus markdown plus local-first, and why you own your data |
 | [03: The KB and Your Universe](./03-the-kb-and-universe.md) | What `universe.md` is, and how your knowledge base grows through use |
-| [04: The Disciplines](./04-the-disciplines.md) | The failure log, the session ritual, and the weekly hour |
+| [04: The Disciplines](./04-the-disciplines.md) | The failure log, the session ritual, and the weekly review |
 | [05: Working Together](./05-working-together.md) | Field reports, the cohort deal, and how nexus points connect |
 | [06: The Arc](./06-the-arc.md) | Where this goes: from one command to a connected network |
 
