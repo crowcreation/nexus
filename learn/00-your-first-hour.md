@@ -1,6 +1,6 @@
 # Your First Hour
 
-<!-- TODO: quickstart diagram - "five tiny things" (Goal · universe.md · Knowledge base · Failure log · /done). Generate at learn/images/five-things-day-one.png via gpt-image-2 (--quality high) and embed here. Blocked at build time: OpenAI image billing hard limit reached. -->
+![Day one, five small things: a real goal, universe.md as your map, a knowledge base, a failure log, and the /done command](./images/five-things-day-one.png)
 
 This is the quickstart. Day one is deliberately small. You are not installing ninety commands or wiring up a fleet of agents. You are setting up five small things and learning one command.
 
