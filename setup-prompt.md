@@ -185,3 +185,27 @@ closing ritual is real from the first session.
   marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`) and
   point Cowork at your Nexus folder, then `/done` works there too.
 - **Public repo:** <https://github.com/crowcreation/nexus>
+
+### Connecting your code repos
+
+Nexus is the outer layer. It holds your map, goals, failure log, and disciplines; it does not hold your code. When you have code repositories (a product, a website, a client project), point Nexus at them rather than running Nexus inside them or copying code in. Then, when you work on a repo, your AI reads that repo's own `CLAUDE.md` and works inside its folder, following its rules.
+
+To wire this up, paste this into a Nexus session once:
+
+```text
+Set Nexus up as the outer layer over my code repos, without swallowing them.
+
+1. Show me the repositories already listed in universe.md, then ask me to confirm
+   them and add any missing ones, with their local paths on this machine. Keep it
+   to one round of questions.
+2. Update universe.md: under a "Repositories" section, list each code repo with
+   its name, a one-line purpose, and its local path.
+3. Add a short section to my Nexus CLAUDE.md titled "Working across my repos", in
+   plain English: Nexus is the outer layer (it holds the map, goals, failure log,
+   and disciplines, not the code); when a task is about a repo listed in
+   universe.md, cd into that repo's folder first, read its own CLAUDE.md / custom
+   instructions, and work inside that folder following its rules; never copy code
+   into Nexus and never run Nexus from inside a code repo.
+4. Show me the updated universe.md repo list and the new CLAUDE.md section, then
+   stop. Keep the writing plain.
+```

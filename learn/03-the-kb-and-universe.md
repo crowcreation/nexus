@@ -41,6 +41,12 @@ The frontmatter is deliberately light: four fields on every note and overview, n
 
 Because everything is plain markdown in folders, the knowledge base opens cleanly as an [Obsidian](https://obsidian.md) vault. Link related pages with vault-relative paths (for example `/KB/Knowledge/some-topic.md`), and a minimal setup with the `obsidian-git` and `dataview` community plugins gives you version-controlled notes and live queries over your frontmatter without leaving markdown.
 
+## Your code repos stay outside Nexus
+
+A fair question: if `universe.md` is the map of your world, do your code projects live inside Nexus? No. Nexus is the outer layer. It holds the map, your goals, your failure log, and your disciplines, not your code. Your repositories stay where they are.
+
+So you list each repo in `universe.md` (its name, what it is, where it lives on your machine), and when you work on one, your AI moves into that repo's folder and follows that repo's own `CLAUDE.md` and conventions. Nexus points to your repos; it does not swallow them. The setup guide has a one-paste prompt to wire this up.
+
 ---
 
 → Template: [universe.md](../templates/universe.md)
