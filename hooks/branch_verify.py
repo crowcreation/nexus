@@ -2,7 +2,7 @@
 """PreToolUse hook — soft-warn on branch mismatch before git commit.
 
 Checks whether the current git branch matches the expected branch
-(from .nexus/session-state/expected-branch.txt). If they differ,
+(from .claude/session-state/expected-branch.txt). If they differ,
 emits a stderr warning. Does NOT block — exit 0 always.
 
 The expected-branch file is opt-in. If it doesn't exist, the hook
@@ -29,11 +29,11 @@ def git(args):
     return ""
 
 
-def find_nexus_dir():
+def find_state_dir():
     toplevel = git(["rev-parse", "--show-toplevel"])
     if toplevel:
-        return Path(toplevel) / ".nexus"
-    return Path.cwd() / ".nexus"
+        return Path(toplevel) / ".claude" / "session-state"
+    return Path.cwd() / ".claude" / "session-state"
 
 
 def main():
@@ -49,8 +49,8 @@ def main():
         if not re.search(r"git\s+commit", command):
             return
 
-        nexus_dir = find_nexus_dir()
-        expected_file = nexus_dir / "session-state" / "expected-branch.txt"
+        state_dir = find_state_dir()
+        expected_file = state_dir / "expected-branch.txt"
 
         if not expected_file.exists():
             return
@@ -67,7 +67,7 @@ def main():
             print(
                 f"[nexus] Branch mismatch: expected '{expected}', "
                 f"currently on '{current}'. If intentional, update: "
-                f"echo '{current}' > .nexus/session-state/expected-branch.txt",
+                f"echo '{current}' > .claude/session-state/expected-branch.txt",
                 file=sys.stderr,
             )
     except Exception:

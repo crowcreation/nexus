@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stop hook — persist session state for next pre-flight.
 
-Writes .nexus/session-state/last-session.json with current branch,
+Writes .claude/session-state/last-session.json with current branch,
 HEAD SHA, timestamp, and session ID. The next session's pre-flight
 reads this to detect what changed between sessions.
 
@@ -29,21 +29,22 @@ def git(args):
     return ""
 
 
-def find_nexus_dir():
+def find_state_dir():
     toplevel = git(["rev-parse", "--show-toplevel"])
     if toplevel:
-        return Path(toplevel) / ".nexus"
-    return Path.cwd() / ".nexus"
+        return Path(toplevel) / ".claude" / "session-state"
+    return Path.cwd() / ".claude" / "session-state"
 
 
 def main():
     try:
-        nexus_dir = find_nexus_dir()
-        state_dir = nexus_dir / "session-state"
-
-        if not nexus_dir.exists():
+        # Only persist state inside a git repo — outside one there is no
+        # stable toplevel to anchor .claude/session-state/ to.
+        toplevel = git(["rev-parse", "--show-toplevel"])
+        if not toplevel:
             return
 
+        state_dir = find_state_dir()
         state_dir.mkdir(parents=True, exist_ok=True)
 
         branch = git(["rev-parse", "--abbrev-ref", "HEAD"])

@@ -181,9 +181,9 @@ closing ritual is real from the first session.
 - **The course:** [`learn/`](./learn/) walks through the why, the substrate,
   the KB and `universe.md`, the disciplines, and the arc.
 - **Using Cowork instead of the terminal?** Cowork only sees plugin commands,
-  not the ones in `.claude/commands/`. Install the Nexus plugin (`/plugin
-  marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`) and
-  point Cowork at your Nexus folder, then `/done` works there too.
+  not the ones in `.claude/commands/`, and shows them namespaced (`nexus:done`).
+  The desktop install path (including the no-terminal route) is documented in
+  [`docs/cowork-setup.md`](./docs/cowork-setup.md).
 - **Public repo:** <https://github.com/crowcreation/nexus>
 
 ### Connecting your code repos
