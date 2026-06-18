@@ -148,12 +148,19 @@ CONVENTIONS - keep these EXACT (they let my Nexus connect to my brother's
   happened | root cause); any future agent gets a contract block (inputs /
   outputs / constraints / forbidden).
 
-Init git, commit "chore: bootstrap Nexus foundation". Then ask me whether to
-create a PRIVATE GitHub remote and push (gh repo create <name> --private
---source=. --push, or give me the manual steps if gh isn't installed). A
-git-controlled, remotely-backed KB is part of the deal - it's the substrate
-the whole experiment runs on, and later the basis for connecting to my
-brother's Nexus.
+Init git, commit "chore: bootstrap Nexus foundation". Then set up the GitHub
+remote, handling sign-in explicitly because this is where people get stuck:
+  1. Check GitHub auth FIRST: run `gh auth status`. If it is not signed in,
+     stop and tell me to run `gh auth login` (GitHub.com, HTTPS, log in via
+     browser), and wait until I confirm before continuing.
+  2. Then create and push the private remote: `gh repo create <name>
+     --private --source=. --push`. If `gh` is not installed, give me the
+     manual steps.
+  3. If a push fails with `permission denied` or an SSH-key error, that is a
+     sign-in problem, not a code problem. Point me back to `gh auth login` (or
+     setting up an SSH key) and retry. Do not move on until the push works.
+A git-backed, remotely-stored KB is part of the deal: it is how version
+control works, and later the basis for connecting to other operators' Nexus.
 
 FINISH: summarise what you built in 5 lines, remind me that /done is the one
 command I run on day one (and that /status and /idea graduate in once the

@@ -6,7 +6,7 @@ Each module takes a few minutes. Read them in order if this is new to you, or ju
 
 ## Start here
 
-If you only do one thing, read [Your First Hour](./00-your-first-hour.md). It describes the five small things you set up on day one, and the one command you actually run.
+New to this? Read [Why This Exists](./01-why-and-vision.md) first, so you know what Nexus is and why it matters, then [Your First Hour](./00-your-first-hour.md) to get going. In a hurry? Your First Hour stands on its own and opens with the one-line version.
 
 ## The modules
 
