@@ -1,7 +1,7 @@
 {
   "name": "nexus",
-  "version": "0.4.0",
-  "description": "Operational discipline for Claude Code. Session pre-flight, failure logging, branch verification, and operator onboarding. Companion to The Coherence Problem field guide.",
+  "version": "0.5.0",
+  "description": "Operational discipline for Claude Code and Cowork: the session ritual (/done, /status, /idea), failure logging with the three-occurrence rule, session pre-flight, branch verification, and operator onboarding. Companion to The Coherence Problem field guide.",
   "author": {
     "name": "CrowCreation",
     "email": "cmc@crowcreation.com"

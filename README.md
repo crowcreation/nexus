@@ -63,6 +63,16 @@ Privacy: no telemetry, no network calls, no data leaves your machine. [Full sour
 
 **Requirements**: [Claude Code](https://claude.ai/code), Python 3.8+, Git.
 
+### Using Nexus in Cowork
+
+Cowork (the desktop app) loads plugin commands, not the command files sitting in your project folder. So to get `/done`, `/status`, and `/idea` in Cowork, install the Nexus plugin:
+
+1. Add the marketplace: `/plugin marketplace add crowcreation/nexus`
+2. Install, or reinstall to update: `/plugin install nexus@nexus`
+3. Point Cowork at your Nexus folder, type `/`, and you should see `done` in the list.
+
+The plugin and Claude Code share the same plugin format, so the same commands work in both. If you have an older version installed, reinstall to pick up the latest.
+
 ---
 
 ## Go deeper

@@ -180,4 +180,8 @@ closing ritual is real from the first session.
   with other operators.
 - **The course:** [`learn/`](./learn/) walks through the why, the substrate,
   the KB and `universe.md`, the disciplines, and the arc.
+- **Using Cowork instead of the terminal?** Cowork only sees plugin commands,
+  not the ones in `.claude/commands/`. Install the Nexus plugin (`/plugin
+  marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`) and
+  point Cowork at your Nexus folder, then `/done` works there too.
 - **Public repo:** <https://github.com/crowcreation/nexus>
