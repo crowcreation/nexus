@@ -1,0 +1,18 @@
+# Pre-commit hooks for the Nexus plugin.
+#
+# Install once:
+#   pip install pre-commit
+#   pre-commit install
+#
+# The coherence check is zero-dependency stdlib Python, so it runs against the
+# system interpreter with no environment to build.
+repos:
+  - repo: local
+    hooks:
+      - id: nexus-plugin-coherence
+        name: Nexus plugin coherence
+        description: Assert every consumer agrees with nexus.structure.json
+        entry: python scripts/check_plugin_coherence.py
+        language: system
+        pass_filenames: false
+        always_run: true

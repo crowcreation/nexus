@@ -6,7 +6,7 @@ Nexus is an experimental, evolving field manual, not a finished product. This pa
 
 - **The failure log** - the core primitive. Append-only record of what broke and why.
 - **`/done`** - the day-one session-close command: daily note, failure-log entry with three-occurrence check, project state nudge, optional knowledge capture.
-- **`/failure`** - plugin command for structured failure-log entries with drift categories.
+- **`/failure`** - plugin command for failure-log entries. Format-tolerant: matches the shape your log already uses, with drift categories as an optional vocabulary rather than an imposed one.
 - **`/field-report`** - formats and redacts a log entry for sharing with other operators. Nothing sent automatically.
 - **`/nexus-init`** - one idempotent command to bootstrap the KB-root foundations (root `failure-log.md`, the `KB/` PARA skeleton, day-one hygiene files). The one-command alternative to the setup prompt.
 - **The three hooks** - session pre-flight, branch verification before commit, and session save.

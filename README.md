@@ -64,6 +64,8 @@ Privacy: no telemetry, no network calls, no data leaves your machine. [Full sour
 
 **Requirements**: [Claude Code](https://claude.ai/code), Python 3.8+, Git.
 
+**Keeping it current**: the plugin gets updates; an installed copy can fall behind. [Keeping Nexus updated](./docs/updating.md) covers the CLI and desktop routes. (The paste layer above never has this problem — you own your copy.)
+
 ### Using Nexus in Cowork
 
 Cowork (the desktop app) loads plugin commands, not the command files sitting in your project folder, and the commands appear namespaced (`nexus:done`, `nexus:status`). The full desktop story — installing with no terminal, the namespaced commands, and refreshing a stale plugin — lives in one place: [Using Nexus in Cowork](./docs/cowork-setup.md).
@@ -73,6 +75,7 @@ Cowork (the desktop app) loads plugin commands, not the command files sitting in
 ## Go deeper
 
 - [ROADMAP.md](./ROADMAP.md) - what's built today versus what's planned, honestly
+- [STRUCTURE.md](./STRUCTURE.md) - the one structural shape, the coherence check that keeps the plugin honest with itself, and the two-layer sync trade-off
 - [The Coherence Problem](./docs/the-coherence-problem.md) - the full field guide: why persistent AI systems degrade and the five drift modes
 - [The Operator Stack](./docs/the-operator-stack.md) - five layers, from substrate to shared intelligence
 - [Patterns](./patterns/) - five steal-this patterns with implementation details

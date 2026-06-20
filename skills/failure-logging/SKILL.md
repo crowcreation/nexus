@@ -3,9 +3,15 @@ name: failure-logging
 description: "Use when recording AI workflow failures, reviewing failure patterns, or applying the three-occurrence rule. Provides drift category codes and structured failure capture guidance."
 ---
 
-## Drift Categories
+## Drift Categories (optional)
 
-When recording a failure, classify it using one of these categories:
+Categories are an **opt-in vocabulary, never a requirement**. The day-one
+failure log is a plain date-and-root-cause line with no category at all, and most
+logs never need more than that. Reach for these codes only once your own entries
+ask for a shorthand — when the same kinds of failure keep recurring and grouping
+them helps. Do not impose them up front.
+
+When you do choose to categorise, use one of these seven:
 
 | Code | Category | What it means | Diagnostic question |
 |------|----------|---------------|-------------------|
