@@ -1,6 +1,6 @@
 {
   "name": "nexus",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Operational discipline for Claude Code and Cowork: the session ritual (/done, /status, /idea), failure logging with the three-occurrence rule, session pre-flight, branch verification, and a KB-root foundations bootstrap (/nexus-init). Companion to The Coherence Problem field guide.",
   "author": {
     "name": "CrowCreation",

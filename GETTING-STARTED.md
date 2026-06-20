@@ -4,6 +4,8 @@ A greenfield setup, from an empty terminal to a running Nexus, in about ten minu
 
 Everything here works the same on **macOS, Windows, and Linux**: the commands are identical. "Open a terminal" means Terminal on macOS or Linux, or PowerShell (or Windows Terminal) on Windows.
 
+> Just want the discipline in an *existing* project, with no install and no new structure? Paste [CLAUDE-lite](./templates/CLAUDE-lite.md) instead. This guide is the full greenfield build.
+
 ## What you need first
 
 - **Git** - version control ([install](https://git-scm.com/downloads)).
@@ -36,13 +38,9 @@ Everything here works the same on **macOS, Windows, and Linux**: the commands ar
    /plugin install nexus@nexus
    ```
 
-6. **Scaffold your Nexus.** Type:
-   ```
-   /nexus-init
-   ```
-   This creates your `failure-log.md`, the `KB/` folders, and the day-one hygiene files. It is safe to run again later; it only adds what is missing.
-
-   *Prefer a guided setup that also captures your goal and maps your world?* Instead of `/nexus-init`, paste the [setup prompt](./setup-prompt.md) and answer its few questions.
+6. **Scaffold your Nexus.** Two ways, pick one:
+   - **Quick (`/nexus-init`):** creates your `CLAUDE.md` (the operating rules), `failure-log.md`, the `KB/` folders, and the hygiene files. Idempotent and fast. You then add your goal and `universe.md` as you go (`/status` will prompt you).
+   - **Guided (the setup prompt, recommended for a first Nexus):** instead of `/nexus-init`, paste the [setup prompt](./setup-prompt.md) and answer a few questions. It does everything `/nexus-init` does, and also interviews you to seed your goal and a living `universe.md` up front, so there is nothing to fill in afterwards.
 
 7. **Back it up to GitHub.** Ask Claude: *"back this up to a new private GitHub repo"*. It will run the steps for you. The first time, it may ask you to sign in once with `gh auth login` (choose GitHub.com and log in through the browser).
 

@@ -8,6 +8,20 @@ The version here matches `.claude-plugin/plugin.json` and
 `.claude-plugin/marketplace.json`. Every command, hook, or structure change bumps
 the version and adds an entry below.
 
+## [0.8.0] - 2026-06-20
+
+`/nexus-init` now seeds a `CLAUDE.md` of operating rules, so the quick scaffold
+path is no longer rule-less. Getting Started spells out the three onboarding paths.
+
+### Changed
+
+- `/nexus-init` also creates a `CLAUDE.md` (from `templates/CLAUDE-lite.md`) when
+  absent, alongside the failure log, KB skeleton, and hygiene files. The quick path
+  now includes the operating rules; the setup-prompt remains the guided path that
+  additionally seeds your goal and `universe.md`.
+- `GETTING-STARTED.md` clarifies the three ways in: CLAUDE-lite paste (no install),
+  plugin + `/nexus-init` (quick), plugin + setup-prompt (guided).
+
 ## [0.7.0] - 2026-06-20
 
 Phase B: mechanical sync so the plugin cannot silently drift from its own source

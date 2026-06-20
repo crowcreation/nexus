@@ -53,13 +53,13 @@ The plugin is the enforcement and graduation layer. Adopt it once the discipline
 ```
 /nexus-init
 ```
-This ensures the root `failure-log.md`, the `KB/` PARA skeleton, and day-one hygiene files (`.gitignore`, `.env.example`). It is idempotent — it only creates what's missing and never overwrites. It is the one-command alternative to pasting the full setup prompt.
+This ensures a `CLAUDE.md` of operating rules, the root `failure-log.md`, the `KB/` PARA skeleton, and day-one hygiene files (`.gitignore`, `.env.example`). It is idempotent — it only creates what's missing and never overwrites. It is the one-command alternative to pasting the full setup prompt.
 
 **What you get:**
 - **Session pre-flight** - verifies your branch, checks what changed, flags stale assumptions. Runs automatically.
 - **Failure log** (`/failure`) - appends to the same root `failure-log.md` that `/done` writes, so the three-occurrence rule sees every entry. Format-tolerant: matches the log shape you already use, categories optional.
 - **Branch verification** - warns before committing on the wrong branch.
-- **Foundations bootstrap** (`/nexus-init`) - one idempotent command to scaffold the KB-root structure.
+- **Foundations bootstrap** (`/nexus-init`) - one idempotent command to scaffold your operating rules (`CLAUDE.md`) and the KB-root structure.
 - **Field reports** (`/field-report`) - formats log entries for [Discussions](https://github.com/crowcreation/nexus/discussions) with redaction prompts. Nothing sent automatically.
 
 Privacy: no telemetry, no network calls, no data leaves your machine. [Full source](./.claude-plugin/).

@@ -1,5 +1,5 @@
 ---
-description: "Bootstrap the KB-root Nexus foundations in this repo — root failure-log.md, the KB/ PARA skeleton, and day-one hygiene files. Idempotent: ensures what's missing, never overwrites."
+description: "Bootstrap the KB-root Nexus foundations in this repo — a CLAUDE.md of operating rules, root failure-log.md, the KB/ PARA skeleton, and day-one hygiene files. Idempotent: ensures what's missing, never overwrites."
 allowed-tools: ["Write", "Read", "Bash", "Glob"]
 ---
 
@@ -60,11 +60,14 @@ For each item below, check whether it already exists. If it does, leave it as-is
 
    with a comment noting these are filled when wiring real tools, not on day one.
 
-5. **Summary** — print what was created versus what was already present:
+5. **`CLAUDE.md`** — if absent, create it from the plugin's `templates/CLAUDE-lite.md`. This holds your operating rules: the five disciplines and the session ritual. (The setup-prompt writes a fuller `CLAUDE.md`; this is the lean starter so the quick path is not rule-less.)
+
+6. **Summary** — print what was created versus what was already present:
 
    ```
    Nexus KB-root foundations ensured:
      failure-log.md    — append-only failure record (committable)   [created | already present]
+     CLAUDE.md         — operating rules (the disciplines)          [created | already present]
      KB/ (PARA)        — Projects/Areas/Knowledge/Goals/Daily/Archive/_Admin  [created | already present]
      .gitignore        — day-one hygiene                             [created | ensured | already present]
      .env.example      — placeholder keys                            [created | already present]
@@ -73,4 +76,4 @@ For each item below, check whether it already exists. If it does, leave it as-is
    Pre-flight runs automatically at session start and reads .claude/session-state/.
    ```
 
-6. If the user has an expected working branch, offer to write it to `.claude/session-state/expected-branch.txt` so branch verification activates. Create the `.claude/session-state/` directory if needed.
+7. If the user has an expected working branch, offer to write it to `.claude/session-state/expected-branch.txt` so branch verification activates. Create the `.claude/session-state/` directory if needed.
