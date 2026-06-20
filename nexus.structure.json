@@ -1,0 +1,35 @@
+{
+  "$comment": "Single machine-readable source of structural truth for the Nexus plugin. Consumers (markdown commands, hooks, templates, docs) restate these values in prose; editing this file does NOT auto-propagate. scripts/check_plugin_coherence.py is what keeps every consumer honest by asserting they all agree. When you change a path, a command, or the drift vocabulary, change it here AND in every consumer, then run the check.",
+  "schema_version": 1,
+  "failure_log_path": "failure-log.md",
+  "session_state_dir": ".claude/session-state",
+  "universe_path": "universe.md",
+  "para_folders": [
+    "KB/Projects",
+    "KB/Areas",
+    "KB/Knowledge",
+    "KB/Goals",
+    "KB/Daily",
+    "KB/Archive",
+    "KB/_Admin"
+  ],
+  "frontmatter_fields": [
+    "title",
+    "status",
+    "tags",
+    "updated"
+  ],
+  "commands": [
+    "done",
+    "status",
+    "idea",
+    "failure",
+    "field-report",
+    "nexus-init"
+  ],
+  "drift_categories": {
+    "$comment": "Optional, emergent vocabulary — never imposed on a day-one log. The check asserts these codes are consistent WHERE they appear (the failure-logging skill, CLAUDE-lite, /failure, the optional pointer in templates/failure-log.md), not that every log is categorised.",
+    "optional": true,
+    "codes": ["SS", "CF", "ID", "DF", "CO", "FL", "UN"]
+  }
+}

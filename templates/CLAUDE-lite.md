@@ -123,13 +123,20 @@ assumption, a duplicated effort — add an entry:
 
 **What happened:** [one sentence]
 **Root cause:** [one sentence]
-**Category:** [SS|CF|ID|DF|CO|FL|UN]
+**Category:** [optional — SS|CF|ID|DF|CO|FL|UN]
 **Severity:** [CONTAINED|EXTERNAL]
 **Status:** DETECTED
 **Count:** [how many times this root cause has appeared]
 ```
 
-### Drift Categories
+The date, what happened, and root cause are the whole of it. The category,
+severity, and status fields are optional — useful once patterns recur, skippable
+on day one. A plain line is a complete entry.
+
+### Drift Categories (optional)
+
+An opt-in vocabulary, never required. Adopt it only when recurring failures want
+a shorthand:
 
 | Code | Name | Signal |
 |------|------|--------|
@@ -181,8 +188,8 @@ When the session is ending:
    should have been.
 
 2. **If something went wrong, append to failure-log.md.** One entry
-   per failure. One sentence for what happened, one for why. Pick the
-   closest category.
+   per failure. One sentence for what happened, one for why. A category
+   is optional — add one only if you are already using them.
 
 3. **If nothing went wrong, don't write anything.**
 
@@ -261,7 +268,8 @@ disagree, the live source wins.
 
 ### Failure Log
 Append to failure-log.md when something goes wrong. Format: what
-happened, root cause, category, count. Categories: SS (State
+happened, root cause, count. Categories are optional — an opt-in
+shorthand once failures recur, not a day-one cost: SS (State
 Staleness), CF (Context Fragmentation), ID (Instruction Decay),
 DF (Discovery Failure), CO (Coordination Failure), FL (Feedback
 Loss), UN (Uncategorised). Severity: CONTAINED or EXTERNAL. Don't

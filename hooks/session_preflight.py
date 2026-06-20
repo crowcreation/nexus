@@ -38,6 +38,25 @@ def find_state_dir():
     return Path.cwd() / ".claude" / "session-state"
 
 
+def plugin_version():
+    """Installed plugin version, read offline from the plugin manifest.
+
+    Reads ${CLAUDE_PLUGIN_ROOT}/.claude-plugin/plugin.json — no network call, so
+    nothing phones home. Returns "" if the env var is unset (running outside the
+    plugin) or the manifest is unreadable. A future opt-in could compare this
+    against the marketplace; that is deliberately deferred.
+    """
+    root = os.environ.get("CLAUDE_PLUGIN_ROOT", "")
+    if not root:
+        return ""
+    try:
+        manifest = Path(root) / ".claude-plugin" / "plugin.json"
+        data = json.loads(manifest.read_text(encoding="utf-8"))
+        return str(data.get("version", ""))
+    except Exception:
+        return ""
+
+
 def load_last_session(state_dir):
     state_file = state_dir / "last-session.json"
     if state_file.exists():
@@ -59,6 +78,10 @@ def main():
         if not branch:
             print(json.dumps({}))
             return
+
+        version = plugin_version()
+        if version:
+            lines.append(f"Nexus plugin v{version}")
 
         lines.append(f"Branch: {branch} ({head})")
 

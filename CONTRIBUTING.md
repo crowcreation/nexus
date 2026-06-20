@@ -35,6 +35,25 @@ Concrete incidents are more valuable than abstract opinions.
 
 Nexus is intentionally narrow.
 
+## Keeping the plugin coherent
+
+Two rules keep the plugin honest with itself and current for the people who
+install it:
+
+- **Structure lives in one place.** Paths, the command set, and the drift
+  vocabulary are declared once in [`nexus.structure.json`](./nexus.structure.json).
+  Every consumer restates them in its own prose or code, so when you change one,
+  change it everywhere and run `python scripts/check_plugin_coherence.py`. The
+  check runs on commit (pre-commit) and in CI; it fails with a precise diff if a
+  consumer drifts.
+- **Every command, hook, or structure change bumps the version and adds a
+  changelog entry.** Update `version` in both `.claude-plugin/plugin.json` and
+  `.claude-plugin/marketplace.json`, and add an entry to
+  [`CHANGELOG.md`](./CHANGELOG.md). This is how an installed plugin can tell it is
+  behind its source.
+
+---
+
 The goal is not to build the biggest system.
 The goal is to understand how coherence degrades in real workflows,
 and which disciplines prevent it.

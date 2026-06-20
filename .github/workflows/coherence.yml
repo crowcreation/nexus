@@ -1,0 +1,21 @@
+name: coherence
+
+# Asserts the plugin agrees with its own single source of structural truth
+# (nexus.structure.json). nexus-public is a separate repo, so this CI is a clean
+# add. The check is zero-dependency stdlib Python — no install step needed.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run plugin coherence check
+        run: python scripts/check_plugin_coherence.py
