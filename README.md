@@ -41,7 +41,7 @@ The plugin is the enforcement and graduation layer. Adopt it once the discipline
 
 **1.** Add the marketplace (one-time):
 ```
-/plugin marketplace add crowcreation/nexus
+/plugin marketplace add https://github.com/crowcreation/nexus
 ```
 
 **2.** Install:

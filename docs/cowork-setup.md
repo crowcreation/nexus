@@ -28,7 +28,7 @@ This is the path for an operator who has no terminal and no Git set up yet. The 
 1. **Open the Customize panel** in the desktop app and find the plugin / marketplace section. **[unverified — confirm the exact menu label and location in the clean dry-run]**
 2. **Add the Nexus marketplace.** This is the part that may not be possible from the GUI today. Field evidence from this week: the desktop Plugin Directory only searches the "Anthropic & Partners" catalogue plus marketplaces you have already added under "Personal", and a search for `crowcreation/nexus` returned **no match**. So a pure-GUI add of this third-party marketplace is **unconfirmed**. It may require a one-time terminal step first:
    ```
-   /plugin marketplace add crowcreation/nexus
+   /plugin marketplace add https://github.com/crowcreation/nexus
    ```
    run once in the CLI, after which the marketplace appears in the desktop Customize panel for install and updates. If you genuinely have no terminal, this is the current gap, and the clean dry-run is what will tell us whether a pure-desktop add is possible at all. We would rather say this plainly than promise a no-terminal add that does not yet exist.
 3. **Install the plugin** from the Customize panel once the marketplace is visible. **[unverified — confirm the install button and confirmation in the clean dry-run]**
@@ -57,7 +57,7 @@ The terminal stays primary; the desktop app is a window onto the same files, not
 
 | Question | Answer |
 |---|---|
-| How do I install in the desktop app? | Through the Customize panel, not `/plugin`. A one-time CLI `/plugin marketplace add crowcreation/nexus` may be needed first (unconfirmed). |
+| How do I install in the desktop app? | Through the Customize panel, not `/plugin`. A one-time CLI `/plugin marketplace add https://github.com/crowcreation/nexus` may be needed first (unconfirmed). |
 | Why don't my `/done` files show up? | Cowork loads plugin commands, not loose `.claude/commands/` files. Install the plugin. |
 | What are the commands called? | Namespaced: `nexus:done`, `nexus:status`, `nexus:idea`, `nexus:failure`. |
 | Does `/plugin` work in Cowork? | No. `/plugin` is CLI-only. Use the Customize panel in the desktop app. |

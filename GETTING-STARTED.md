@@ -32,7 +32,7 @@ Everything here works the same on **macOS, Windows, and Linux**: the commands ar
 
 5. **Install the Nexus plugin** (this is what gives you the commands). Type these in the Claude session:
    ```
-   /plugin marketplace add crowcreation/nexus
+   /plugin marketplace add https://github.com/crowcreation/nexus
    /plugin install nexus@nexus
    ```
 

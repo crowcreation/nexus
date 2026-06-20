@@ -16,7 +16,7 @@ git init
 claude
 ```
 
-The simplest way to get the `/done`, `/status`, `/idea` commands is to **install the plugin**: `/plugin marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`. No terminal? See [Using Nexus in Cowork](./docs/cowork-setup.md). Or copy the commands in manually, as below.
+The simplest way to get the `/done`, `/status`, `/idea` commands is to **install the plugin**: `/plugin marketplace add https://github.com/crowcreation/nexus` then `/plugin install nexus@nexus`. No terminal? See [Using Nexus in Cowork](./docs/cowork-setup.md). Or copy the commands in manually, as below.
 
 **Before pasting:** copy this repo's `commands/` folder into your repo's
 `.claude/commands/` so `done.md`, `status.md` and `idea.md` already exist. The
