@@ -10,7 +10,7 @@ Generate a contribution to the Nexus project's GitHub Discussions from your loca
 
 If `$ARGUMENTS` contains a date or entry number (e.g., `/field-report 2026-05-25` or `/field-report 3`):
 
-1. **Read** `.nexus/failure-log.md` and find the matching entry.
+1. **Read** the root `failure-log.md` and find the matching entry.
 2. **Display** the entry and ask: "Review this for anything project-specific, private, or identifying you want to redact before sharing."
 3. **Walk through redaction**:
    - Project names or file paths → replace with `[project]` or `[path]`
@@ -48,7 +48,7 @@ Tell the user: "Click the link, paste the title and body, review, and post. Noth
 
 If `$ARGUMENTS` is empty or contains `--synthesis`:
 
-1. **Read** `.nexus/failure-log.md` and parse all entries.
+1. **Read** the root `failure-log.md` and parse all entries.
 2. **Analyse** for patterns:
    - Category distribution (count per drift mode)
    - Three-occurrence clusters (categories with >= 3 entries)

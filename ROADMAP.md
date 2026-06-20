@@ -8,8 +8,7 @@ Nexus is an experimental, evolving field manual, not a finished product. This pa
 - **`/done`** - the day-one session-close command: daily note, failure-log entry with three-occurrence check, project state nudge, optional knowledge capture.
 - **`/failure`** - plugin command for structured failure-log entries with drift categories.
 - **`/field-report`** - formats and redacts a log entry for sharing with other operators. Nothing sent automatically.
-- **`/nexus-onboard`** - guided flow to map your repos, websites, tools, and projects into `universe.md`.
-- **`/nexus-init`** - initialises the plugin's `.nexus/` state in a project.
+- **`/nexus-init`** - one idempotent command to bootstrap the KB-root foundations (root `failure-log.md`, the `KB/` PARA skeleton, day-one hygiene files). The one-command alternative to the setup prompt.
 - **The three hooks** - session pre-flight, branch verification before commit, and session save.
 - **CLAUDE-lite** - five rules and a failure log to paste into any project, no dependencies.
 - **The `learn/` course** - seven modules covering the why, the substrate, the KB and `universe.md`, the disciplines, working together, and the arc.
@@ -36,6 +35,7 @@ These exist in the maintainer's private setup. Operators adopt them as their wor
 - **Agent-register and fleet docs** - the apparatus for running a fleet of narrow agents.
 - **Notes-index automation** - generating and validating the notes index automatically.
 
-## Notes on consolidation
+## Retired commands
 
-- The plugin's earlier `/nexus-status` command (a failure-log summary) has been retired in favour of `/status`, which scans the whole system; the failure-log summary is a subset of that scan.
+- **`/nexus-status`** - an earlier failure-log summary, retired in favour of `/status`, which scans the whole system; the failure-log summary is a subset of that scan.
+- **`/nexus-onboard`** - a one-shot universe-mapping interview that wrote to `.nexus/universe.md`. Retired in the 0.6.0 KB-root reconciliation: universe mapping is now seeded by the setup prompt's interview and kept living by `/done` (nudged when the world moves) and the weekly review, against a root `universe.md`. The earlier plugin also kept state under a `.nexus/` directory; that model has been replaced entirely by the KB-root structure (root `failure-log.md` and `universe.md`, session state under `.claude/session-state/`).

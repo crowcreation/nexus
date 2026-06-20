@@ -31,15 +31,15 @@ def git(args):
     return ""
 
 
-def find_nexus_dir():
+def find_state_dir():
     toplevel = git(["rev-parse", "--show-toplevel"])
     if toplevel:
-        return Path(toplevel) / ".nexus"
-    return Path.cwd() / ".nexus"
+        return Path(toplevel) / ".claude" / "session-state"
+    return Path.cwd() / ".claude" / "session-state"
 
 
-def load_last_session(nexus_dir):
-    state_file = nexus_dir / "session-state" / "last-session.json"
+def load_last_session(state_dir):
+    state_file = state_dir / "last-session.json"
     if state_file.exists():
         try:
             return json.loads(state_file.read_text(encoding="utf-8"))
@@ -50,7 +50,7 @@ def load_last_session(nexus_dir):
 
 def main():
     try:
-        nexus_dir = find_nexus_dir()
+        state_dir = find_state_dir()
         lines = []
 
         branch = git(["rev-parse", "--abbrev-ref", "HEAD"])
@@ -62,7 +62,7 @@ def main():
 
         lines.append(f"Branch: {branch} ({head})")
 
-        last = load_last_session(nexus_dir)
+        last = load_last_session(state_dir)
 
         if last:
             last_branch = last.get("branch", "")
@@ -104,7 +104,7 @@ def main():
                     pass
 
             expected_branch_file = (
-                nexus_dir / "session-state" / "expected-branch.txt"
+                state_dir / "expected-branch.txt"
             )
             if expected_branch_file.exists():
                 expected = expected_branch_file.read_text(
@@ -115,10 +115,10 @@ def main():
                         f"Expected branch '{expected}', currently on "
                         f"'{branch}' — verify before committing"
                     )
-        elif not nexus_dir.exists():
+        elif not state_dir.exists():
             lines.append(
-                "No .nexus/ directory found. Run /nexus-init to set up "
-                "failure logging and session tracking."
+                "No Nexus session state yet. Run /done to close a session, "
+                "or paste the setup-prompt to scaffold the KB-root structure."
             )
         else:
             lines.append("First session with Nexus tracking.")

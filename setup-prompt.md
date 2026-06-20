@@ -5,6 +5,19 @@ Paste everything in the code block below into Claude Code, running inside a
 real work, seeds a living `universe.md`, and ends by running `/done` so the one
 day-one habit is real from minute one.
 
+## Before you start
+
+You need **Git, a terminal, and Claude Code** installed (plus a GitHub account if you want your work backed up). Create an empty folder, turn it into a Git repo, and open Claude Code in it:
+
+```
+mkdir my-nexus
+cd my-nexus
+git init
+claude
+```
+
+The simplest way to get the `/done`, `/status`, `/idea` commands is to **install the plugin**: `/plugin marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`. No terminal? See [Using Nexus in Cowork](./docs/cowork-setup.md). Or copy the commands in manually, as below.
+
 **Before pasting:** copy this repo's `commands/` folder into your repo's
 `.claude/commands/` so `done.md`, `status.md` and `idea.md` already exist. The
 prompt is written to leave them alone, not recreate them. (`/done` is the one
@@ -181,9 +194,9 @@ closing ritual is real from the first session.
 - **The course:** [`learn/`](./learn/) walks through the why, the substrate,
   the KB and `universe.md`, the disciplines, and the arc.
 - **Using Cowork instead of the terminal?** Cowork only sees plugin commands,
-  not the ones in `.claude/commands/`. Install the Nexus plugin (`/plugin
-  marketplace add crowcreation/nexus` then `/plugin install nexus@nexus`) and
-  point Cowork at your Nexus folder, then `/done` works there too.
+  not the ones in `.claude/commands/`, and shows them namespaced (`nexus:done`).
+  The desktop install path (including the no-terminal route) is documented in
+  [`docs/cowork-setup.md`](./docs/cowork-setup.md).
 - **Public repo:** <https://github.com/crowcreation/nexus>
 
 ### Connecting your code repos

@@ -3,13 +3,13 @@ operator_handle: ""
 github_username: ""
 generated: ""
 last_updated: ""
-nexus_version: "0.4.0"
+nexus_version: "0.6.0"
 completed_steps: []
 ---
 
 # My Universe
 
-<!-- Mapped by /nexus-onboard. Edit freely. -->
+<!-- A living map, not a one-shot snapshot: seeded at setup, nudged by /done when the world moves, reconciled in the weekly review. Edit freely. -->
 
 ## Repositories
 

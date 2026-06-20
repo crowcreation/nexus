@@ -1,9 +1,9 @@
 ---
-description: "Initialize the .nexus/ directory with default config, empty failure log, and session state directory."
+description: "Bootstrap the KB-root Nexus foundations in this repo — root failure-log.md, the KB/ PARA skeleton, and day-one hygiene files. Idempotent: ensures what's missing, never overwrites."
 allowed-tools: ["Write", "Read", "Bash", "Glob"]
 ---
 
-Set up the Nexus operational discipline directory for this project.
+Scaffold the same KB-root foundations the setup-prompt emits, in one command. Use this when you want the structure without pasting the full setup-prompt interview. It is **idempotent** — it ensures each piece exists and leaves anything already present untouched. There is no dedicated state directory in this model; state lives at the repo root (`failure-log.md`, `universe.md`) and under `.claude/session-state/`.
 
 ## Pre-flight checks
 
@@ -17,34 +17,60 @@ Report any missing dependencies before proceeding. All three are required.
 
 ## Steps
 
-1. Check if `.nexus/` already exists in the project root. If it does, ask the user whether to overwrite or skip.
+For each item below, check whether it already exists. If it does, leave it as-is and report "ensured (already present)". Only create what's missing. Never overwrite an existing file.
 
-2. Create the following structure:
-   - `.nexus/config.json` — copy from the plugin's `templates/config.json`:
+1. **Root `failure-log.md`** — if absent, create it from the plugin's `templates/failure-log.md`. This is the append-only failure record. `/done` and `/failure` both write here.
 
-     ```json
-     {
-       "failure_log_path": ".nexus/failure-log.md",
-       "expected_branch_path": ".nexus/session-state/expected-branch.txt",
-       "three_occurrence_threshold": 3
-     }
-     ```
+2. **`KB/` PARA skeleton** — ensure these folders exist, each with a one-line `README.md` explaining what lives there (only write the README if the folder or README is missing):
+   - `KB/Projects/` — time-bounded initiatives with a start and an end.
+   - `KB/Areas/` — ongoing responsibilities with no end date.
+   - `KB/Knowledge/` — reusable, evergreen reference. Fills through use, never pre-filled.
+   - `KB/Goals/` — the outcomes you're working towards.
+   - `KB/Daily/` — daily notes; `/done` appends here.
+   - `KB/Archive/` — completed or retired material.
+   - `KB/_Admin/` — governance, indexes, and house-keeping.
 
-   - `.nexus/failure-log.md` — copy from the plugin's `templates/failure-log.md` (the starter template with category codes table and empty log)
-   - `.nexus/session-state/` — create this directory (it will hold ephemeral per-machine state)
-
-3. Suggest adding `.nexus/session-state/` to `.gitignore` (session state is per-machine, not shareable). The config and failure log ARE committable.
-
-4. Print a summary:
+3. **`.gitignore`** — if absent, create it with these entries:
 
    ```
-   .nexus/ initialized:
-     config.json       — plugin configuration (committable)
-     failure-log.md    — append-only failure record (committable)
-     session-state/    — ephemeral session tracking (add to .gitignore)
-
-   Next: failures are recorded with /failure. Pre-flight runs automatically at session start.
-   Map your tools, repos, and projects with /nexus-onboard.
+   .env
+   .env.*
+   !.env.example
+   .auth/
+   state/
+   .claude/session-state/
+   .claude/worktrees/
+   __pycache__/
+   *.pyc
+   .obsidian/workspace*
+   .DS_Store
+   .tmp/
    ```
 
-5. If the user has an expected working branch, offer to write it to `.nexus/session-state/expected-branch.txt` so branch verification activates.
+   If a `.gitignore` already exists, ensure `.claude/session-state/` is among its entries (append it if missing) and leave the rest alone.
+
+4. **`.env.example`** — if absent, create it with placeholder keys only (NEVER a committed `.env`):
+
+   ```
+   ANTHROPIC_API_KEY=
+   OPENAI_API_KEY=
+   HF_TOKEN=
+   GITHUB_TOKEN=
+   ```
+
+   with a comment noting these are filled when wiring real tools, not on day one.
+
+5. **Summary** — print what was created versus what was already present:
+
+   ```
+   Nexus KB-root foundations ensured:
+     failure-log.md    — append-only failure record (committable)   [created | already present]
+     KB/ (PARA)        — Projects/Areas/Knowledge/Goals/Daily/Archive/_Admin  [created | already present]
+     .gitignore        — day-one hygiene                             [created | ensured | already present]
+     .env.example      — placeholder keys                            [created | already present]
+
+   Next: failures are recorded with /failure (and at session close with /done).
+   Pre-flight runs automatically at session start and reads .claude/session-state/.
+   ```
+
+6. If the user has an expected working branch, offer to write it to `.claude/session-state/expected-branch.txt` so branch verification activates. Create the `.claude/session-state/` directory if needed.

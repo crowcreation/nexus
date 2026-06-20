@@ -47,16 +47,17 @@ The plugin is the enforcement and graduation layer. Adopt it once the discipline
 /plugin install nexus@nexus
 ```
 
-**3.** In any project:
+**3.** In any project, bootstrap the KB-root foundations in one command:
 ```
 /nexus-init
 ```
+This ensures the root `failure-log.md`, the `KB/` PARA skeleton, and day-one hygiene files (`.gitignore`, `.env.example`). It is idempotent — it only creates what's missing and never overwrites. It is the one-command alternative to pasting the full setup prompt.
 
 **What you get:**
 - **Session pre-flight** - verifies your branch, checks what changed, flags stale assumptions. Runs automatically.
-- **Failure log** (`/failure`) - structured drift categories. Three occurrences of the same root cause triggers an alert.
+- **Failure log** (`/failure`) - appends to the same root `failure-log.md` that `/done` writes, so the three-occurrence rule sees every entry. Format-tolerant: matches the log shape you already use, categories optional.
 - **Branch verification** - warns before committing on the wrong branch.
-- **Universe mapping** (`/nexus-onboard`) - guided flow to document your repos, websites, tools, and projects as queryable AI context.
+- **Foundations bootstrap** (`/nexus-init`) - one idempotent command to scaffold the KB-root structure.
 - **Field reports** (`/field-report`) - formats log entries for [Discussions](https://github.com/crowcreation/nexus/discussions) with redaction prompts. Nothing sent automatically.
 
 Privacy: no telemetry, no network calls, no data leaves your machine. [Full source](./.claude-plugin/).
@@ -65,13 +66,7 @@ Privacy: no telemetry, no network calls, no data leaves your machine. [Full sour
 
 ### Using Nexus in Cowork
 
-Cowork (the desktop app) loads plugin commands, not the command files sitting in your project folder. So to get `/done`, `/status`, and `/idea` in Cowork, install the Nexus plugin:
-
-1. Add the marketplace: `/plugin marketplace add crowcreation/nexus`
-2. Install, or reinstall to update: `/plugin install nexus@nexus`
-3. Point Cowork at your Nexus folder, type `/`, and you should see `done` in the list.
-
-The plugin and Claude Code share the same plugin format, so the same commands work in both. If you have an older version installed, reinstall to pick up the latest.
+Cowork (the desktop app) loads plugin commands, not the command files sitting in your project folder, and the commands appear namespaced (`nexus:done`, `nexus:status`). The full desktop story — installing with no terminal, the namespaced commands, and refreshing a stale plugin — lives in one place: [Using Nexus in Cowork](./docs/cowork-setup.md).
 
 ---
 

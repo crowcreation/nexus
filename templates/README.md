@@ -11,7 +11,6 @@ same shapes; these are here as reference and for copying by hand.
 | `CLAUDE-lite.md` | Five rules and a failure log to paste into any project. No dependencies. |
 | `failure-log.md` | The failure-log starter. The one primitive worth keeping if you keep nothing else. |
 | `CLAUDE.md.template` | A fuller CLAUDE.md starter. |
-| `config.json` | Plugin config (failure-log path, branch path, three-occurrence threshold). |
 
 ## Frontmatter is light on purpose
 
