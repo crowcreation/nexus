@@ -4,11 +4,11 @@
 
 # Nexus
 
+> **Just setting up?** [Getting Started](./GETTING-STARTED.md) takes you from an empty terminal to a running Nexus in about ten minutes, on macOS, Windows, or Linux.
+
 Operational coherence for persistent AI systems. When AI becomes a long-running operator inside your repo, a specific class of failures emerges: not capability failures, but coherence failures. Stale state, fragmented context, instructions that decay, lessons that don't stick. Nexus is an experimental, evolving field manual for catching this before it compounds.
 
 **This is for** developers running persistent AI workflows (Claude Code, Cursor, Aider) where operational state survives across sessions, repositories evolve over time, and instructions outlive the conversation that created them. If your AI usage is mostly isolated conversations, many of these pathologies never emerge.
-
-**Just want to set it up?** [Getting Started](./GETTING-STARTED.md) takes you from an empty terminal to a running Nexus in about ten minutes.
 
 ---
 

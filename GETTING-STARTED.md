@@ -2,6 +2,8 @@
 
 A greenfield setup, from an empty terminal to a running Nexus, in about ten minutes. This is the terminal path, which is the reliable one today. Prefer the desktop app? See [Using Nexus in Cowork](./docs/cowork-setup.md).
 
+Everything here works the same on **macOS, Windows, and Linux**: the commands are identical. "Open a terminal" means Terminal on macOS or Linux, or PowerShell (or Windows Terminal) on Windows.
+
 ## What you need first
 
 - **Git** - version control ([install](https://git-scm.com/downloads)).
