@@ -12,8 +12,9 @@ Before scaffolding, verify dependencies:
 1. Run `python3 --version` (or `python --version` on Windows). If neither works, tell the user: "Python 3.8+ is required for Nexus hooks. Install it from python.org before continuing."
 2. Run `git --version`. If it fails, tell the user: "Git is required for session pre-flight and branch verification."
 3. Confirm the current directory is a git repo (`git rev-parse --show-toplevel`). If not, suggest `git init`.
+4. **Sanity-check the location.** List the current directory. If it already holds several subdirectories (especially ones that are themselves git repos) or otherwise looks like a parent/container folder rather than a fresh, near-empty project, STOP and confirm before scaffolding: "This looks like a folder that holds other projects, not an empty project repo. Scaffolding here puts `CLAUDE.md`, `failure-log.md`, and `KB/` at this level. Did you mean to `cd` into a specific project folder first?" Only proceed once the operator confirms.
 
-Report any missing dependencies before proceeding. All three are required.
+Report any missing dependencies before proceeding. The first three are required; the location check is a guard against scaffolding in the wrong place (a common mistake is forgetting to `cd` into your new folder).
 
 ## Steps
 
@@ -76,4 +77,4 @@ For each item below, check whether it already exists. If it does, leave it as-is
    Pre-flight runs automatically at session start and reads .claude/session-state/.
    ```
 
-7. If the user has an expected working branch, offer to write it to `.claude/session-state/expected-branch.txt` so branch verification activates. Create the `.claude/session-state/` directory if needed.
+7. **Branch verification (optional — recommend Skip for a fresh setup).** Explain it in one plain line: branch verification warns you if you ever commit on a different branch than the one you expect. It earns its keep once you work across several branches or run parallel sessions; on a fresh, single-branch setup there is nothing to drift from yet, so the simplest choice is to **skip it for now and add it later**. Recommend Skip. Only if the operator wants it on, write their current branch to `.claude/session-state/expected-branch.txt` (creating the directory if needed). Do not present a long menu; a fresh operator should not have to reason about master vs main on day one.

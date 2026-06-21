@@ -8,6 +8,19 @@ The version here matches `.claude-plugin/plugin.json` and
 `.claude-plugin/marketplace.json`. Every command, hook, or structure change bumps
 the version and adds an entry below.
 
+## [0.9.0] - 2026-06-21
+
+`/nexus-init` hardening from the cold third-party walkthrough: a location guard
+and a simpler branch-verification prompt.
+
+### Changed
+
+- `/nexus-init` pre-flight now sanity-checks the location and warns before
+  scaffolding into a directory that looks like a parent/container of other
+  projects (catches the common "forgot to `cd` into the new folder" mistake).
+- `/nexus-init` branch-verification step now recommends Skip on a fresh setup and
+  explains it in one line, instead of presenting a master-vs-main menu on day one.
+
 ## [0.8.0] - 2026-06-20
 
 `/nexus-init` now seeds a `CLAUDE.md` of operating rules, so the quick scaffold
