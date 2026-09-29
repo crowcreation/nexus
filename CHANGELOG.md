@@ -8,6 +8,25 @@ The version here matches `.claude-plugin/plugin.json` and
 `.claude-plugin/marketplace.json`. Every command, hook, or structure change bumps
 the version and adds an entry below.
 
+## [0.10.0] - 2026-09-29
+
+`/done` becomes ambient: it captures in the background and asks nothing. Field
+report from a dev-session user: session close asked four questions at once
+(approve a rule, fix a tag, save two notes) and pulled them out of flow.
+
+### Changed
+
+- `/done` writes the daily note, failure log, project state, knowledge notes and
+  `universe.md` nudges without offering or asking. Housekeeping calls (which tag
+  spelling to use) are the AI's to make. Output is one line.
+- A three-occurrence rule is no longer put to the operator at session close. It
+  is appended to the failure log as `**Status:** PROPOSED`, matching what
+  CLAUDE-lite already said ("rules stay as proposals until the weekly review").
+  `/done` never writes to `CLAUDE.md`.
+- `/status` collects PROPOSED rules and lists each under **Rules waiting** with
+  a promote / refine / drop recommendation and a reason. The operator answers
+  yes or no in review mode, not mid-build.
+
 ## [0.9.0] - 2026-06-21
 
 `/nexus-init` hardening from the cold third-party walkthrough: a location guard
