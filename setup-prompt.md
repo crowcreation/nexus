@@ -148,8 +148,8 @@ KB/_Admin/kb-style.md - how knowledge gets written here. Content, verbatim:
       from COMPILED pages (synthesised knowledge - keep current, bump
       updated). When in doubt, save raw now, compile later.
     * Every new page gets one line in KB/_Admin/notes-index.md.
-    * The KB grows through use - /done offers to capture durable knowledge
-      at session close. Never bulk-import or pre-fill; stale knowledge is
+    * The KB grows through use - /done captures durable knowledge at
+      session close without asking. Never bulk-import or pre-fill; stale knowledge is
       worse than absent knowledge.
 
 Commands: three already exist in .claude/commands/ (done.md, status.md,

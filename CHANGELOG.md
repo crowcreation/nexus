@@ -8,6 +8,20 @@ The version here matches `.claude-plugin/plugin.json` and
 `.claude-plugin/marketplace.json`. Every command, hook, or structure change bumps
 the version and adds an entry below.
 
+## [0.10.1] - 2026-09-29
+
+The paste layer now says what `/done` does: session close asks nothing.
+
+### Changed
+
+- `templates/CLAUDE-lite.md`: both Session Close sections now say to ask
+  nothing at close. Save notes and make housekeeping calls without asking,
+  leave three-occurrence rules as PROPOSED for the weekly review, and finish with
+  one line. An operator's own Claude had grown its close into a four-question
+  decision round, which the old wording did not forbid.
+- `setup-prompt.md` and `learn/03`: `/done` "captures" and "updates" rather than
+  "offers to".
+
 ## [0.10.0] - 2026-09-29
 
 `/done` becomes ambient: it captures in the background and asks nothing. Field
