@@ -17,7 +17,7 @@ A map that is filled in once and never touched again solves the wrong problem. I
 So `universe.md` is kept alive through a simple lifecycle:
 
 - **Seeded at setup.** The setup interview produces a first rough version.
-- **Nudged by `/done`.** When a session actually changes your world, by adding a tool or starting a project, the close-of-session ritual offers to update the map. Not every session, only when the world moved.
+- **Nudged by `/done`.** When a session actually changes your world, by adding a tool or starting a project, the close-of-session ritual updates the map, without asking. Not every session, only when the world moved.
 - **Reconciled in the weekly review.** This is the main mechanism. Once a week you tidy the map against reality. This matches the pace at which it tends to drift.
 - **Flagged by `/status`.** When you have the `/status` command later, it can point out drift, but it never writes to the map itself.
 

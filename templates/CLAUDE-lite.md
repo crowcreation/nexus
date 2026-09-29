@@ -193,6 +193,13 @@ When the session is ending:
 
 3. **If nothing went wrong, don't write anything.**
 
+4. **Ask nothing.** Session close runs in the background of the
+   operator's attention, often mid-flow. Save notes, log failures and
+   make housekeeping calls (tag spelling, formatting) yourself. A
+   three-occurrence rule goes into the failure log as PROPOSED and waits
+   for the weekly review; never ask for approval at close. Finish with
+   one line saying what was saved.
+
 ---
 
 ## How this file grows
@@ -285,7 +292,9 @@ When the session is ending, scan for friction: wasted effort, stale
 assumptions, repeated work, confused context, misunderstood intent,
 or anything that felt harder than it should have been. If anything
 went wrong, append to failure-log.md. If nothing went wrong, don't
-write anything.
+write anything. Ask nothing at close: save and decide housekeeping
+yourself, leave rules as PROPOSED for the weekly review, and finish
+with one line saying what was saved.
 
 <!-- ── end operational discipline ── -->
 ```
