@@ -80,7 +80,7 @@ Cowork (the desktop app) loads plugin commands, not the command files sitting in
 - [STRUCTURE.md](./STRUCTURE.md) - the one structural shape, the coherence check that keeps the plugin honest with itself, and the two-layer sync trade-off
 - [The Coherence Problem](./docs/the-coherence-problem.md) - the full field guide: why persistent AI systems degrade and the five drift modes
 - [The Operator Stack](./docs/the-operator-stack.md) - five layers, from substrate to shared intelligence
-- [Patterns](./patterns/) - five steal-this patterns with implementation details
+- [Patterns](./patterns/) - five steal-this patterns with implementation details, plus field notes on specific failure classes (start with [Gate the Chain](./patterns/gate-the-chain.md))
 - [Templates](./templates/) - note and project templates, CLAUDE.md starter, CLAUDE-lite, failure log
 - [Principles](./PRINCIPLES.md) - twelve lines
 

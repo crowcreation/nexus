@@ -528,6 +528,10 @@ since the last session, and whether any assumptions from the last
 session are still valid. This prevents the most disorienting coherence
 failure: doing excellent work in the wrong context.
 
+A field note on one specific failure class, ended in production: [Gate the
+Chain](../patterns/gate-the-chain.md), on the commit or merge that ran after
+the test that failed, because a semicolon joined them.
+
 ## XI. Following the work
 
 The system behind these patterns is built in the open. The failure log
